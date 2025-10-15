@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking with Airport Auto-Suggestion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .hero {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        
+        .hero-container {
+            padding: 30px;
+        }
+        
+        .hero-form {
+            background: white;
+        }
+        
+        .form-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1a2980;
+        }
+        
+        .form-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .form-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        form {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .trip-class-wrapper {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .trip-type, .class-type {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.3s;
+        }
+        
+        select:focus {
+            border-color: #1a2980;
+            outline: none;
+        }
+        
+        .search-fields {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .locations, .dates, .passengers {
+            background: #f9f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+        }
+        
+        .passengers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+        }
+        
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444;
+            font-size: 0.95rem;
+        }
+        
+        input {
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        input:focus {
+            border-color: #1a2980;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 41, 128, 0.1);
+        }
+        
+        .search-button {
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .search-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 15px rgba(26, 41, 128, 0.3);
+        }
+        
+        .search-button i {
+            font-size: 1.2rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-content h3 {
+            color: #1a2980;
+            margin-bottom: 8px;
+        }
+        
+        .airport-suggestions {
+            position: relative;
+        }
+        
+        .suggestions-container {
+            position: absolute;
+            width: 100%;
+            max-height: 300px;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 100;
+            display: none;
+        }
+        
+        .suggestion-item {
+            padding: 12px 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+        
+        .suggestion-item:hover {
+            background: #f0f8ff;
+        }
+        
+        .airport-code {
+            font-weight: bold;
+            color: #1a2980;
+            min-width: 50px;
+            text-align: right;
+        }
+        
+        .airport-location {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .airport-name {
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            .trip-class-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .search-fields {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-container {
+                padding: 15px;
+            }
+            
+            .locations, .dates, .passengers {
+                padding: 15px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .form-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Find Your Perfect Flight</h1>
+            <p>Search thousands of flights worldwide and book with confidence. Our travel experts are ready to help you plan your journey.</p>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-form">
+                    <div class="form-title">
+                        <h2>Flight Search</h2>
+                        <p>Enter your travel details below to find the best flight options</p>
+                    </div>
+                    
+                    <form id="flight-form">
+                        <div class="trip-class-wrapper">
+                            <!-- Trip Type -->
+                            <div class="trip-type">
+                                <select id="trip-type" name="trip" class="trip-select">
+                                    <option value="round">Round Trip</option>
+                                    <option value="one-way">One Way</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Class Type -->
+                            <div class="class-type">
+                                <select id="class-type" name="class" class="class-select">
+                                    <option value="economy">Economy</option>
+                                    <option value="premium-economy">Premium Economy</option>
+                                    <option value="business">Business</option>
+                                    <option value="first">First</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="search-fields">
+                            <div class="field-group locations">
+                                <div class="form-field origin airport-suggestions">
+                                    <label>Origin</label>
+                                    <input type="text" id="origin" name="origin" placeholder="LAX" required>
+                                    <div class="suggestions-container" id="origin-suggestions"></div>
+                                </div>
+                                <div class="form-field destination airport-suggestions">
+                                    <label>Destination</label>
+                                    <input type="text" id="destination" name="destination" placeholder="HKG" required>
+                                    <div class="suggestions-container" id="destination-suggestions"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="field-group dates">
+                                <div class="form-field">
+                                    <label>Departing</label>
+                                    <input type="date" name="departing" required>
+                                </div>
+                                <div class="form-field">
+                                    <label>Returning</label>
+                                    <input type="date" name="returning">
+                                </div>
+                            </div>
+                            
+                            <div class="field-group passengers">
+                                <div class="form-field">
+                                    <label>Adults</label>
+                                    <input type="number" name="adults" min="1" max="9" value="1">
+                                </div>
+                                <div class="form-field">
+                                    <label>Children (2–12)</label>
+                                    <input type="number" name="children" min="0" max="9" value="0">
+                                </div>
+                                <div class="form-field">
+                                    <label>Infants (0–2)</label>
+                                    <input type="number" name="infants" min="0" max="9" value="0">
+                                </div>
+                                <div class="form-field">
+                                    <label>Flexibility (± days)</label>
+                                    <input type="number" name="flexibility" min="0" max="3" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" required placeholder="Your Name">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="phone">Phone</label>
+                            <input type="tel" name="phone" required placeholder="Your Phone Number">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" required placeholder="Your Email">
+                        </div>
+
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-paper-plane"></i> Submit Enquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/411/411745.png" alt="Customer Satisfaction">
+                <div class="feature-content">
+                    <h3>Customer Satisfaction</h3>
+                    <p>98% of our customers rate us excellent</p>
+                </div>
+            </div>
+            
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/411/411747.png" alt="Quick response">
+                <div class="feature-content">
+                    <h3>Quick Response</h3>
+                    <p>Average response time: under 15 minutes</p>
+                </div>
+            </div>
+            
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/411/411746.png" alt="24/7 Support">
+                <div class="feature-content">
+                    <h3>24/7 Support</h3>
+                    <p>Our travel experts are always available</p>
+                </div>
+            </div>
+            
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/411/411748.png" alt="Best Customer Experience">
+                <div class="feature-content">
+                    <h3>Best Customer Experience</h3>
+                    <p>5-time award winner for customer service</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Sample airport data (in a real application, this would be loaded from Data/airports.json)
+        // For demonstration, we'll use a larger set of airports
+        const airports = [
+            {"code": "LAX", "name": "Los Angeles International Airport", "city": "Los Angeles", "country": "United States"},
+            {"code": "JFK", "name": "John F. Kennedy International Airport", "city": "New York", "country": "United States"},
+            {"code": "LHR", "name": "Heathrow Airport", "city": "London", "country": "United Kingdom"},
+            {"code": "CDG", "name": "Charles de Gaulle Airport", "city": "Paris", "country": "France"},
+            {"code": "DXB", "name": "Dubai International Airport", "city": "Dubai", "country": "United Arab Emirates"},
+            {"code": "HKG", "name": "Hong Kong International Airport", "city": "Hong Kong", "country": "China"},
+            {"code": "SIN", "name": "Singapore Changi Airport", "city": "Singapore", "country": "Singapore"},
+            {"code": "SYD", "name": "Sydney Kingsford Smith Airport", "city": "Sydney", "country": "Australia"},
+            {"code": "FRA", "name": "Frankfurt Airport", "city": "Frankfurt", "country": "Germany"},
+            {"code": "ICN", "name": "Incheon International Airport", "city": "Seoul", "country": "South Korea"},
+            {"code": "SFO", "name": "San Francisco International Airport", "city": "San Francisco", "country": "USA"},
+            {"code": "ORD", "name": "O'Hare International Airport", "city": "Chicago", "country": "USA"},
+            {"code": "DFW", "name": "Dallas/Fort Worth International Airport", "city": "Dallas", "country": "USA"},
+            {"code": "DEN", "name": "Denver International Airport", "city": "Denver", "country": "USA"},
+            {"code": "ATL", "name": "Hartsfield-Jackson Atlanta International Airport", "city": "Atlanta", "country": "USA"},
+            {"code": "MAD", "name": "Adolfo Suárez Madrid–Barajas Airport", "city": "Madrid", "country": "Spain"},
+            {"code": "BCN", "name": "Barcelona–El Prat Airport", "city": "Barcelona", "country": "Spain"},
+            {"code": "AMS", "name": "Amsterdam Airport Schiphol", "city": "Amsterdam", "country": "Netherlands"},
+            {"code": "FCO", "name": "Leonardo da Vinci–Fiumicino Airport", "city": "Rome", "country": "Italy"},
+            {"code": "MUC", "name": "Munich Airport", "city": "Munich", "country": "Germany"},
+            {"code": "PEK", "name": "Beijing Capital International Airport", "city": "Beijing", "country": "China"},
+            {"code": "PVG", "name": "Shanghai Pudong International Airport", "city": "Shanghai", "country": "China"},
+            {"code": "NRT", "name": "Narita International Airport", "city": "Tokyo", "country": "Japan"},
+            {"code": "HND", "name": "Haneda Airport", "city": "Tokyo", "country": "Japan"},
+            {"code": "YYZ", "name": "Toronto Pearson International Airport", "city": "Toronto", "country": "Canada"},
+            {"code": "YVR", "name": "Vancouver International Airport", "city": "Vancouver", "country": "Canada"},
+            {"code": "GRU", "name": "São Paulo/Guarulhos International Airport", "city": "São Paulo", "country": "Brazil"},
+            {"code": "DME", "name": "Domodedovo International Airport", "city": "Moscow", "country": "Russia"},
+            {"code": "BOM", "name": "Chhatrapati Shivaji Maharaj International Airport", "city": "Mumbai", "country": "India"},
+            {"code": "DEL", "name": "Indira Gandhi International Airport", "city": "Delhi", "country": "India"},
+            {"code": "BKK", "name": "Suvarnabhumi Airport", "city": "Bangkok", "country": "Thailand"},
+            {"code": "KUL", "name": "Kuala Lumpur International Airport", "city": "Kuala Lumpur", "country": "Malaysia"},
+            {"code": "IST", "name": "Istanbul Airport", "city": "Istanbul", "country": "Turkey"},
+            {"code": "CPT", "name": "Cape Town International Airport", "city": "Cape Town", "country": "South Africa"},
+            {"code": "AKL", "name": "Auckland Airport", "city": "Auckland", "country": "New Zealand"}
+        ];
+
+        // DOM Elements
+        const originInput = document.getElementById('origin');
+        const destinationInput = document.getElementById('destination');
+        const originSuggestions = document.getElementById('origin-suggestions');
+        const destinationSuggestions = document.getElementById('destination-suggestions');
+        const flightForm = document.getElementById('flight-form');
+
+        // Function to filter airports based on input
+        function filterAirports(query) {
+            if (!query) return [];
+            
+            const lowerQuery = query.toLowerCase();
+            return airports.filter(airport => 
+                airport.code.toLowerCase().includes(lowerQuery) || 
+                airport.name.toLowerCase().includes(lowerQuery) ||
+                airport.city.toLowerCase().includes(lowerQuery) ||
+                `${airport.city}, ${airport.country}`.toLowerCase().includes(lowerQuery)
+            ).slice(0, 8); // Limit to 8 results
+        }
+
+        // Function to display suggestions
+        function showSuggestions(inputElement, suggestionsElement, suggestions) {
+            suggestionsElement.innerHTML = '';
+            
+            if (suggestions.length === 0) {
+                suggestionsElement.style.display = 'none';
+                return;
+            }
+            
+            suggestions.forEach(airport => {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.className = 'suggestion-item';
+                suggestionItem.innerHTML = `
+                    <div>
+                        <div class="airport-name">${airport.name}</div>
+                        <div class="airport-location">${airport.city}, ${airport.country}</div>
+                    </div>
+                    <div class="airport-code">${airport.code}</div>
+                `;
+                
+                suggestionItem.addEventListener('click', () => {
+                    inputElement.value = airport.code;
+                    suggestionsElement.style.display = 'none';
+                });
+                
+                suggestionsElement.appendChild(suggestionItem);
+            });
+            
+            suggestionsElement.style.display = 'block';
+        }
+
+        // Event listeners for origin input
+        originInput.addEventListener('input', () => {
+            const query = originInput.value;
+            const filteredAirports = filterAirports(query);
+            showSuggestions(originInput, originSuggestions, filteredAirports);
+        });
+
+        originInput.addEventListener('focus', () => {
+            if (originInput.value) {
+                const query = originInput.value;
+                const filteredAirports = filterAirports(query);
+                showSuggestions(originInput, originSuggestions, filteredAirports);
+            } else {
+                originSuggestions.style.display = 'none';
+            }
+        });
+
+        // Event listeners for destination input
+        destinationInput.addEventListener('input', () => {
+            const query = destinationInput.value;
+            const filteredAirports = filterAirports(query);
+            showSuggestions(destinationInput, destinationSuggestions, filteredAirports);
+        });
+
+        destinationInput.addEventListener('focus', () => {
+            if (destinationInput.value) {
+                const query = destinationInput.value;
+                const filteredAirports = filterAirports(query);
+                showSuggestions(destinationInput, destinationSuggestions, filteredAirports);
+            } else {
+                destinationSuggestions.style.display = 'none';
+            }
+        });
+
+        // Hide suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!originInput.contains(e.target) && !originSuggestions.contains(e.target)) {
+                originSuggestions.style.display = 'none';
+            }
+            if (!destinationInput.contains(e.target) && !destinationSuggestions.contains(e.target)) {
+                destinationSuggestions.style.display = 'none';
+            }
+        });
+
+        // Set today as default for date inputs
+        const today = new Date();
+        document.querySelector('input[name="departing"]').value = today.toISOString().split('T')[0];
+        
+        // Set return date to 7 days from now
+        const nextWeek = new Date();
+        nextWeek.setDate(today.getDate() + 7);
+        document.querySelector('input[name="returning"]').value = nextWeek.toISOString().split('T')[0];
+        
+        // Handle form submission
+        flightForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = new FormData(flightForm);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.origin || !data.destination || !data.departing || !data.name || !data.email || !data.phone) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Show success message
+            alert(`Thank you ${data.name}!\nYour flight inquiry from ${data.origin} to ${data.destination} has been received.\nWe'll contact you shortly at ${data.email} or ${data.phone}.`);
+            
+            // Reset form
+            flightForm.reset();
+            
+            // Reset dates
+            document.querySelector('input[name="departing"]').value = today.toISOString().split('T')[0];
+            document.querySelector('input[name="returning"]').value = nextWeek.toISOString().split('T')[0];
+        });
+
+        // In a real application, you would fetch the airports from a JSON file:
+        /*
+        fetch('Data/airports.json')
+            .then(response => response.json())
+            .then(data => {
+                airports = data;
+            })
+            .catch(error => {
+                console.error('Error loading airport data:', error);
+            });
+        */
+    </script>
+</body>
+</html>

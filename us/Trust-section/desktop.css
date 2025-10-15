@@ -1,0 +1,94 @@
+/* desktop.css - Trust Section */
+@media (min-width: 768px) {
+  .trust-section {
+    padding: 3rem 0;
+  }
+
+  .trust-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .trust-subheadline {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .trust-card {
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .trust-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 48, 143, 0.15);
+  }
+
+  .trust-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .trust-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .trust-card p {
+    font-size: 1.05rem;
+  }
+
+  .trust-cta {
+    margin-top: 3.5rem;
+  }
+
+  .trust-cta-btn {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    max-width: 420px;
+    transition: all 0.3s ease;
+  }
+
+  .trust-cta-btn:hover {
+    background: #2A52BE;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 48, 143, 0.4);
+  }
+
+  /* Large Desktop Styles */
+  @media (min-width: 1024px) {
+    .trust-section {
+      padding: 4rem 0;
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1200px;
+      gap: 1.8rem;
+    }
+
+    .trust-section h2 {
+      font-size: 2.5rem;
+    }
+
+    .trust-subheadline {
+      font-size: 1.2rem;
+    }
+
+    .trust-cta-btn {
+      padding: 20px 45px;
+      font-size: 1.15rem;
+    }
+  }
+}

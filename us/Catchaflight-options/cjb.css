@@ -1,0 +1,174 @@
+/* === JETBLUE FLIGHT OPTIONS SECTION - REFINED CSS === */
+:root {
+  --jetblue-blue: #0d47a1;
+  --jetblue-light: #e3f2fd;
+  --mint-green: #2e7d32;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --card-radius: 12px;
+  --fade-in: all 0.3s ease-in-out;
+}
+
+.agency-services {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+}
+
+.agency-services h2 {
+  text-align: center;
+  color: var(--jetblue-blue);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.agency-services .subhead {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.value-card {
+  background-color: #fff;
+  border-radius: var(--card-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--fade-in);
+  border: 1px solid #eee;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.fare-type {
+  padding: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.fare-type i {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.fare-type h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.blue-basic {
+  background: linear-gradient(135deg, #64b5f6, #1976d2);
+}
+
+.blue {
+  background: linear-gradient(135deg, #42a5f5, #0d47a1);
+}
+
+.blue-extra {
+  background: linear-gradient(135deg, #1e88e5, #0d47a1);
+}
+
+.mint {
+  background: linear-gradient(135deg, #81c784, #2e7d32);
+}
+
+.agency-benefits {
+  list-style: none;
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.agency-benefits li {
+  padding-left: 1.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.agency-benefits li i {
+  position: absolute;
+  left: 0;
+  color: var(--jetblue-blue);
+}
+
+.price-example {
+  background-color: var(--jetblue-light);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 0 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #0d47a1;
+}
+
+.price-example i {
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
+}
+
+.price-example .route {
+  font-weight: 600;
+}
+
+.price-example .price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #e53935;
+}
+
+.price-example .dates {
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.agency-cta {
+  display: block;
+  background-color: var(--mint-green);
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 6px;
+  margin: 1rem 1.5rem 2rem;
+  cursor: pointer;
+  transition: var(--fade-in);
+}
+
+.agency-cta:hover {
+  background-color: #1b5e20;
+}
+
+.agency-cta i {
+  margin-right: 8px;
+}
+
+/* === RESPONSIVE === */
+@media (min-width: 600px) {
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .value-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .agency-services h2 {
+    font-size: 2.4rem;
+  }
+  .agency-services .subhead {
+    font-size: 1.2rem;
+  }
+}

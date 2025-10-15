@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NTSNJBHQ');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flights to Prague</title>
+    <!-- Primary Meta Tags -->
+<meta name="description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+<meta name="keywords" content="tickets to prague, plane tickets to prague, flights to prague, catchaflight, catch a flight">
+<meta name="author" content="Catchaflight">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Catchaflight - Compare & Book Cheap Flights">
+<meta property="og:description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+<meta property="og:url" content="https://www.catchaflight.com.au/">
+<meta property="og:image" content="https://www.catchaflight.com.au/assets/images/og-banner.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Catchaflight - Compare & Book Cheap Flights">
+<meta name="twitter:description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+<meta name="twitter:image" content="https://www.catchaflight.com.au/assets/images/og-banner.jpg">
+
+<!-- Preconnect & Preload Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  </noscript>
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</noscript>
+  
+  <link rel="stylesheet" href="/css/cheapflights.css" />
+
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
+  <style>
+.top-banner {
+  /* non-sticky banner */
+  background-color: #ff5a00;
+  color: white;
+  text-align: center;
+  padding: 10px 0;       /* uniform vertical padding */
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.03em;
+  z-index: 9998;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+   margin-top: 60px; 
+  padding-top: calc(10px + env(safe-area-inset-top));
+}
+
+/* 📞 Sticky Call Bar - Mobile only */
+@media (max-width: 768px) {
+  .sticky-call-bar {
+    position: sticky;
+    top: 60px; /* 60 (header) + 40 (banner) + 20 extra padding */
+    background-color: #ff5a00;
+    color: white;
+    text-align: center;
+    padding: 10px 0;     /* uniform padding */
+    z-index: 9997;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    animation: flash 1.2s infinite alternate;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .sticky-call-bar a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.1rem;
+  }
+
+  .sticky-call-bar i {
+    font-size: 1.2rem;
+    transform: rotate(0deg);
+  }
+}
+
+/* 💡 Flashing background animation */
+@keyframes flash {
+  from {
+    background-color: #ff5a00;
+  }
+  to {
+    background-color: #005fa3;
+  }
+}
+
+/* Sticky phone number fixed at bottom */
+.sticky-phone-bottom-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff5a00;
+  color: white;
+  padding: 20px 0;     /* uniform padding */
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 9999;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sticky-phone-bottom-banner:hover {
+  background-color: #005fa3;
+}
+/* Ensure safe area compatibility on iOS Safari */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.sticky-call-bar,
+.sticky-phone-bottom-banner,
+.top-banner {
+  padding-top: calc(10px + env(safe-area-inset-top));
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+}
+
+
+
+</style>
+
+
+ </head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTSNJBHQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+      <!-- Header -->
+      <header class="header">
+    <div class="logo">
+      <a href="/">
+      <img src="/images/Catchaflight-logo.webp" alt="Catch A Flight Logo" width="100" height="60"></a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/about-us.html">About</a></li>
+        <li><a href="/pages/blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="#deals">Flight Deals <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/pages/domestic-deals.html">Domestic Flight Deals</a></li>
+            <li><a href="/pages/international.html">International Flight Deals</a></li>
+            <li><a href="/flight-deals/auckland.html">Flights to Auckland</a></li>
+            <li><a href="/flight-deals/bali.html">Flights to Bali</a></li>
+            <li><a href="/flight-deals/bangkok.html">Flights to Bangkok</a></li>
+            <li><a href="/flight-deals/delhi.html">Flights to Delhi</a></li>
+            <li><a href="/flight-deals/fiji.html">Flights to Fiji </a></li>
+            <li><a href="/flight-deals/london.html">Flights to London</a></li>
+            <li><a href="/flight-deals/manila.html">Flights to Manila</a></li>
+            <li><a href="/flight-deals/newyork.html">Flights to New York</a></li>
+            <li><a href="/flight-deals/singapore.html">Flights to Singapore</a></li>
+            <li><a href="/flight-deals/tokyo.html">Flights to Tokyo</a></li>
+          </ul>
+        </li>
+        <li class="mobile-only">
+          <div class="mobile-menu-extras">
+            <div class="mobile-social-links">
+              <a href="https://facebook.com/catchaflightau" target="_blank" class="social-link">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/catchaflight.com.au" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
+            <a href="https://catchaflight.golibe.com/login">
+            <button class="sign-in-btn">Sign In</button></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <div class="header-right">
+      <div class="support-info">
+        <p class="support-text">Support: 8:30am-8:30pm (EST)</p>
+        <a href="tel:+13052045332" class="phone-number">
+          <i class="fa-sharp fa-solid fa-phone-volume fa-xl"></i>
+          <span class="phone-text">+1-305-204-5332</span>
+        </a>
+      </div>
+      <a href= "https://catchaflight.golibe.com/login"><button class="sign-in-btn desktop-only">Sign In</button></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+  <!-- 📞 Sticky Flashing Phone Call Bar -->
+<div class="sticky-call-bar">
+ <a href="tel:+13052045332" style="color: #ffffff; text-decoration: none; font-weight: bold;">
+  <i class="fas fa-phone-volume"></i> Call Us +1-305-204-5332
+  </a>
+</div>
+  <!-- 🔷 Top Banner - place it here, outside nav and ul -->
+<div class="top-banner">
+  <p>Catch A Flight To Prague – Great Deals Await!</p>
+</div>
+  
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-form">
+      <form action="https://formspree.io/f/mqabkdjl" method="POST">
+            <input type="hidden" name="_redirect" value="https://www.catchaflight.com.au/thankyou.html">
+
+        <div class="trip-class-wrapper">
+                <!-- Trip Type -->
+                <div class="trip-type">
+                    <select id="trip-type" name="trip" class="trip-select">
+                        <option value="round">Round Trip</option>
+                        <option value="one-way">One Way</option>
+                    </select>
+                </div>
+            
+                <!-- Class Type -->
+                <div class="class-type">
+  
+                    <select id="class-type" name="class" class="class-select">
+                        <option value="economy">Economy</option>
+                        <option value="premium-economy">Premium Economy</option>
+                        <option value="business">Business</option>
+                        <option value="first">First</option>
+                    </select>
+                </div>
+            </div>
+
+        <div class="search-fields">
+          <div class="field-group locations">
+            <div class="form-field origin">
+              <label>Origin</label>
+              <input type="text" name="origin" placeholder="LAX" required>
+            </div>
+            <div class="form-field destination">
+              <label>Destination</label>
+              <input type="text" name="destination" placeholder="HKG" required>
+            </div>
+          </div>
+          <div class="field-group dates">
+            <div class="form-field">
+              <label>Departing</label>
+              <input type="date" name="departing" required>
+            </div>
+            <div class="form-field">
+              <label>Returning</label>
+              <input type="date" name="returning">
+            </div>
+          </div>
+          <div class="field-group passengers">
+            <div class="form-field">
+              <label>Adults</label>
+              <input type="number" name="adults" min="1" max="9" value="1">
+            </div>
+            <div class="form-field">
+              <label>Children (2–12)</label>
+              <input type="number" name="children" min="0" max="9" value="0">
+            </div>
+            <div class="form-field">
+              <label>Infants (0–2)</label>
+              <input type="number" name="infants" min="0" max="9" value="0">
+            </div>
+            <div class="form-field">
+              <label>Flexibility</label>
+              <input type="number" name="flexibility" min="0" max="1" value="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" name="name" required placeholder="Your Name">
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone</label>
+          <input type="tel" name="phone" required placeholder="Your Phone Number">
+        </div>
+        <div class="form-field" style="margin-bottom: 1rem;">
+          <label for="email">Email</label>
+          <input type="email" name="email" required placeholder="Your Email">
+        </div>
+
+        <button type="submit" class="search-button" data-gtm="submit-enquiry">
+          <i class="fas fa-paper-plane"></i> Submit Enquiry
+        </button>
+      </form>
+    </div>
+
+   <div class="hero-content">
+  <h1>Book Flights to Prague - Only Phone Reservations Call Now!</h1>
+
+<style>
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.phone-box-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff5a00;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: flash 1s infinite;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.phone-box-link i {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.phone-box-link:hover {
+  background-color: #e14e00;
+}
+
+@media (max-width: 480px) {
+  .phone-box-link {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+}
+</style>
+
+<div style="text-align:center;">
+  <a href="tel:+13052045332" class="phone-box-link">
+    <i class="fa fa-phone" aria-hidden="true"></i> +1-305-204-5332
+  </a>
+</div>
+      <p>Get Exclusive Phone-only deal with upto 30% discount on Published Fares. Call Now!</p>
+              <h2>Prefer us to call you?</h2>
+<p>Fill out the quick form below and an agent will call you within 15 minutes.</p>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Features Section -->
+    
+      <section class="features">
+        <div class="feature">
+            <img src="/images/guarantee-white.webp" width="48" height="48" alt="Customer Satisfaction">
+            <div class="feature-content">
+                <h3>Customer Satisfaction</h3>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <img src="/images/quick-response-white.webp" width="48" height="48" alt="Quick response">
+            <div class="feature-content">
+                <h3>Quick Response</h3>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <img src="/images/customer-service-white.webp" width="48" height="48" alt="24/7 Support">
+            <div class="feature-content">
+                <h3>24/7 Support</h3>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <img src="/images/best-customer-experience-white.webp" width="48" height="48" alt="Best Customer Experience">
+            <div class="feature-content">
+                <h3>Best Customer Experience</h3>
+            </div>
+        </div>
+    </section>
+  
+      <!-- Europe Deals Section -->
+      <!-- Europe Deals Section -->
+        <section class="domestic-deals">
+  <h2>International Flight Deals</h2>
+  <p>Planning a trip to Prague soon? Catchaflight can help you save on your Prague flight tickets. Connect with our travel experts for the best prices on flights to Prague and enjoy a seamless booking experience.</p>
+  
+    <div class="deals-grid" id="domesticDealsGrid">
+        <!-- Deal Cards -->
+        <div class="deal-card">
+            <div class="deal-info">
+                <h3>DEN → PRG</h3>
+                <p>Denver → Prague</p>
+                <p>Oct 31 - Nov 07</p>
+            </div>
+            <a href= "tel:+13052045332" class="deal-link">
+                <div class="deal-price">514.00 USD</div>
+            </a>
+        </div>
+  
+        <div class="deal-card">
+            <div class="deal-info">
+                <h3>EWR → PRG</h3>
+                <p>Newark → Prague</p>
+                <p>Oct 1 - Oct 15</p>
+            </div>
+            <a href="tel:+13052045332" class="deal-link">
+                <div class="deal-price">449.00 USD</div>
+            </a>
+        </div>
+  
+        <div class="deal-card">
+            <div class="deal-info">
+                <h3>LAX → PRG</h3>
+                <p>Los Angeles → Prague</p>
+                <p>Nov 5 - Nov 14</p>
+            </div>
+            <a href="tel:+13052045332" class="deal-link">
+                <div class="deal-price">423.00 USD</div>
+            </a>
+        </div>
+        
+         <div class="deal-card">
+            <div class="deal-info">
+                <h3>JFK → PRG</h3>
+                <p>New York → Prague</p>
+                <p>Oct 25 - Nov 03</p>
+            </div>
+            <a href="tel:+13052045332" class="deal-link">
+                <div class="deal-price">449.00 USD</div>
+            </a>
+        </div>
+  
+        <!-- Hidden Deals (Initially Hidden) -->
+        <div class="deal-card hidden">
+            <div class="deal-info">
+                <h3>NYC → FCO</h3>
+                <p>NewYork → Rome</p>
+                <p>Sep 08 - Sep 16</p>
+            </div>
+            <a href="tel:+13052045332" class="deal-link">
+                <div class="deal-price">473.00 USD</div>
+            </a>
+        </div>
+  
+        <div class="deal-card hidden">
+            <div class="deal-info">
+                <h3>BOS → CDG</h3>
+                <p>Boston → Paris</p>
+                <p>Sep 09  - Sep 17</p>
+            </div>
+            <a href="tel:+13052045332" class="deal-link">
+                <div class="deal-price">451.00 USD</div>
+            </a>
+        </div>
+  
+        <div class="deal-card hidden">
+            <div class="deal-info">
+                <h3>SFO → ZRH</h3>
+                <p>San Francisco → Zurich</p>
+                <p>Sep 21 - Sep 29</p>
+            </div>
+            <a href="tel:+13052045332" class="deal-link">
+                <div class="deal-price">550.00 USD</div>
+            </a>
+        </div>
+    </div>
+  
+    <!-- Fare Disclaimer -->
+    <div class="fare-disclaimer">
+        <p>*Fares displayed on this page are updated as of June 09, 2025 at 9:26 AM EST.
+        They are for One Way or Round Trips as shown alongside. 
+        These include all Taxes and Fees and our Service Fees. 
+        Fares based on historical data can change without notice and can’t be guaranteed until the booking is
+        confirmed. For more details, read our Terms and Conditions carefully.</p>
+    </div>
+  
+    <!-- Load More Button -->
+    <button class="domestic-load-more">Load More</button>
+  </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+          <div class="container">
+              <h2>Subscribe to Our Newsletter</h2>
+              <p>Get the latest deals and travel updates delivered straight to your inbox.</p>
+              <form class="newsletter-form">
+                  <input type="email" placeholder="Enter your email">
+                  <button type="submit">Subscribe</button>
+              </form>
+          </div>
+      </section>
+
+  
+        <section class="faq-section">
+  <h1>Book Cheap Flight Tickets with Catch A Flight</h1>
+  <p class="intro-text">
+    Planning your next getaway? <strong>Catch A Flight</strong> helps travelers across the U.S. find and book cheap flights to top destinations in Czech Republic. Contact our travel specialists to unlock exclusive airfare deals and enjoy a smooth booking process.
+  </p>
+
+  <h2>Frequently Asked Questions about Booking Cheap Flights</h2>
+
+  <div class="faq-item">
+    <h3>Q. How can I find the cheapest flight tickets?</h3>
+    <p>Be flexible with your travel dates, book early, and consider mid-week departures. Our experts suggest flying on <strong>Tuesdays or Wednesdays</strong> for lower fares.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. When is the best time to book flights to Italy?</h3>
+    <p>We recommend booking <strong>6 to 10 weeks</strong> in advance for international trips. Prices typically rise the closer you get to your travel date.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. What time of day is best to book cheap flights online?</h3>
+    <p>Flight prices can be lower during <strong>early mornings or late evenings</strong>, especially mid-week when demand is lower.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. Which airlines usually offer low-cost tickets to Prague?</h3>
+    <p>Budget airlines like <strong>Condor, Delta, TAP Portugal, United, Swis Air, SAS Airlines and Air France</strong> often offer competitive international fares. We compare prices across <strong>500+ airlines</strong> to find you the best deal.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. How early should I arrive at the airport?</h3>
+    <p>For international departures, arrive at the airport <strong>3 hours before</strong> your scheduled flight. For domestic flights, aim for <strong>2 hours</strong> ahead of time.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. Can I cancel or change my flight after booking?</h3>
+    <p>Yes, but change and cancellation policies vary by airline and ticket type. Our travel advisors can guide you through the process and options available.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. Is it true that flight prices vary based on browser or device?</h3>
+    <p>Sometimes cookies can affect pricing shown. Use private browsing or call our team directly for the most accurate and up-to-date pricing.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. What if I need to book a last-minute flight?</h3>
+    <p>No problem. Our U.S.-based travel team can help you secure last-minute flight deals—just call us at <strong>+1-305-204-5332</strong>.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. Do you offer discounts for seniors, students, or military personnel?</h3>
+    <p>Yes, we often have exclusive discounts for <strong>seniors, students, military members, and group travelers</strong>. Speak to our agents to check current offers.</p>
+  </div>
+
+  <div class="why-catchaflight">
+    <h2>Why book flights with Catch A Flight?</h2>
+    <p><strong>Catch A Flight</strong> is trusted by travelers across the United States to deliver affordable international flight deals. With access to over <strong>500+ airlines</strong> and personalized support, we help you book with confidence. Call now at <strong>+1-305-204-5332</strong> to get your best fare today!</p>
+  </div>
+</section>
+     <!-- Sticky Phone Call Button -->
+<a href="tel:+13052045332" class="sticky-phone-bottom-banner" id="bottomStickyBanner">
+  <i class="fas fa-phone-volume"></i> Call Us +1-305-204-5332
+</a>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Catchaflight</h3>
+                <p>Find and compare the best flight deals from hundreds of airlines.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/catchaflightau" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/catchaflight.com.au" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#search-form">Search Flights</a></li>
+                    <li><a href="#popular-destinations">Popular Destinations</a></li>
+                    <li><a href="/pages/domestic-deals.html">Domestic Deals</a></li>
+                    <li><a href="/pages/international.html">International Deals</a></li>
+                    <li><a href="/pages/cathay-pacific-deals.html">Cathay Pacific Deals</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="/pages/about-us.html">About Us</a></li>
+                    <li><a href="/pages/contact.html">Contact Us</a></li>
+                    <li><a href="/pages/blog.html">Blog</a></li>
+                    <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="contact-info">
+                    <li>
+                        <a href="tel:+13052045332"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> 0305-204-5332</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:support@catchaflight.com.au"> support@catchaflight.com.au</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        30 Auburn Parade, Cringila NSW 2502
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr> <!-- Separator Line -->
+
+        <!-- Disclaimer Section -->
+        <div class="footer-disclaimer">
+            <p>
+                <strong>Disclaimer:</strong> Catchaflight, an independent travel agency operating under the umbrella of 
+                <strong>DRYMS PTY LTD</strong>, is not affiliated with any specific airline. This independence ensures 
+                unbiased recommendations and transparent pricing. Without exclusive ties to specific carriers, 
+                Catchaflight is committed to providing customers with a diverse range of options, ensuring their 
+                travel needs and preferences are met. 
+                <a href="/pages/disclaimer.html" class="read-more">Read more..</a>
+            </p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Catchaflight. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/catchaflightau"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/catchaflight.com.au"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  
+     
+      <script src="/js/main.js" defer></script> 
+
+      <!-- Mobile Popup -->
+<div class="mobile-popup" id="mobilePopup">
+    <button class="popup-close" onclick="closePopup()">×</button>
+    <img src="/images/customer-service-rep.webp" alt="Agent Assistance" class="popup-image" >
+    <p class="popup-text">Get upto 40% off on published fares<br>Let one of our agents help you.</p>
+    <a href="tel:+13052045332" class="popup-call-btn" data-gtm="popup-call">Call Now!</a>
+  </div>
+ 
+ <script>
+  function closePopup() {
+    document.getElementById("mobilePopup").style.display = "none";
+    sessionStorage.setItem("popupDismissed", "true");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("mobilePopup");
+    const targetForm = document.querySelector(".hero-form");
+
+    if (window.innerWidth < 768 && !sessionStorage.getItem("popupDismissed") && popup && targetForm) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            popup.style.display = "block";
+            observer.disconnect(); // Show only once
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      observer.observe(targetForm);
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const loadMoreBtn = document.querySelector(".domestic-load-more");
+
+    loadMoreBtn.addEventListener("click", function () {
+      const hiddenDeals = document.querySelectorAll(".deal-card.hidden");
+
+      hiddenDeals.forEach(deal => {
+        deal.classList.remove("hidden");
+      });
+
+      // Optional: hide the button after loading all deals
+      loadMoreBtn.style.display = "none";
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const stickyBanner = document.getElementById("bottomStickyBanner");
+
+    // Initially hide
+    stickyBanner.style.display = "none";
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      const scrollPercent = (scrollTop + windowHeight) / docHeight;
+
+      // Show after 30%, hide after 90%
+      if (scrollPercent > 0.3 && scrollPercent < 0.9) {
+        stickyBanner.style.display = "flex";
+      } else {
+        stickyBanner.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/674d12ab4304e3196aeb3347/1ie2h1re1';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

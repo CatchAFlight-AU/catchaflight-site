@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NTSNJBHQ');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch A Flight - Domestic Flight Deals</title>
+    <!-- Primary Meta Tags -->
+<meta name="description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+<meta name="keywords" content="cheap flights, flight deals, book flights, domestic flights, international flights">
+<meta name="author" content="Catchaflight">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Catchaflight - Compare & Book Cheap Flights">
+<meta property="og:description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+<meta property="og:url" content="https://www.catchaflight.com.au/">
+<meta property="og:image" content="https://www.catchaflight.com.au/assets/images/og-banner.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Catchaflight - Compare & Book Cheap Flights">
+<meta name="twitter:description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+<meta name="twitter:image" content="https://www.catchaflight.com.au/assets/images/og-banner.jpg">
+
+<!-- Preconnect & Preload Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  </noscript>
+  <link rel="preload" href="/css/styles.css" as="style" onload="this.rel='stylesheet'">
+
+
+  <!-- Preload Hero Background Image -->
+  <link rel="preload" as="image" href="/images/hero-image.webp">
+  <link rel="preload" as="image" href="/images/Catchaflight-logo.webp">
+
+
+
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</noscript>
+
+<link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="canonical" href="https://catchaflight.com.au/domestic-deals">
+
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTSNJBHQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-form">
+          <form id= "search-form" class="flight-search-form">
+            <div class="trip-class-wrapper">
+              <!-- Trip Type -->
+              <div class="trip-type">
+                  <select id="trip-type" name="trip" class="trip-select">
+                      <option value="round">Round Trip</option>
+                      <option value="one-way">One Way</option>
+                  </select>
+              </div>
+          
+              <!-- Class Type -->
+              <div class="class-type">
+
+                  <select id="class-type" name="class" class="class-select">
+                      <option value="economy">Economy</option>
+                      <option value="premium-economy">Premium Economy</option>
+                      <option value="business">Business</option>
+                      <option value="first">First</option>
+                  </select>
+              </div>
+          </div>
+          
+            <div class="search-fields">
+              <div class="field-group locations">
+                <div class="form-field origin">
+                  <label>Origin</label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-plane-departure"></i>
+                    <input type="text" placeholder="SYD" data-airport="from">
+                  </div>
+                </div>
+                <div class="form-field destination">
+                  <label>Destination</label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-plane-arrival"></i>
+                    <input type="text" placeholder="LON" data-airport="to">
+                  </div>
+                </div>
+              </div>
+              <div class="field-group dates">
+                <div class="form-field">
+                  <label>Departing</label>
+                  <div class="input-wrapper">
+                    <i class="far fa-calendar-alt"></i>
+                    <input type="date" placeholder="Departure">
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label>Returning</label>
+                  <div class="input-wrapper">
+                    <i class="far fa-calendar-alt"></i>
+                    <input type="date" placeholder="Return">
+                  </div>
+                </div>
+              </div>
+              <div class="field-group passengers">
+                <div class="form-field passenger-count">
+                  <label>Adult</label>
+                  <div class="counter">
+                    <button type="button" class="counter-btn minus">-</button>
+                    <input type="number" value="1" min="1" max="9" data-passenger="adult">
+                    <button type="button" class="counter-btn plus">+</button>
+                  </div>
+                </div>
+                <div class="form-field passenger-count">
+                  <label>Child <span class="age-limit">(2-12)</span></label>
+                  <div class="counter">
+                    <button type="button" class="counter-btn minus">-</button>
+                    <input type="number" value="0" min="0" max="9" data-passenger="child">
+                    <button type="button" class="counter-btn plus">+</button>
+                  </div>
+                </div>
+                <div class="form-field passenger-count">
+                  <label>Infant <span class="age-limit">(0-2)</span></label>
+                  <div class="counter">
+                    <button type="button" class="counter-btn minus">-</button>
+                    <input type="number" value="0" min="0" max="9" data-passenger="infant">
+                    <button type="button" class="counter-btn plus">+</button>
+                  </div>
+                </div>
+                <div class="form-field passenger-count">
+                  <label>Flexibility</label>
+                  <div class="counter">
+                    <button type="button" class="counter-btn minus">-</button>
+                    <input type="number" value="0" min="0" max="1" readonly class="flexibility-input">
+                    <button type="button" class="counter-btn plus">+</button>
+                  </div>
+                  <div class="flexibility-label">No flexibility</div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="search-button">
+              <i class="fas fa-search"></i>
+              Search Flights
+            </button>
+          </form>
+        </div>
+        <div class="hero-content">
+          <h1>Compare, book, and Catch A Domestic <span class="alternating-text">Flight</span></h1>
+          <p>Compare over 400+ airlines</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+  
+    <section class="features">
+      <div class="feature">
+          <img src="/images/guarantee-white.webp" width="48" height="48" alt="Customer Satisfaction">
+          <div class="feature-content">
+              <h3>Customer Satisfaction</h3>
+          </div>
+      </div>
+      
+      <div class="feature">
+          <img src="/images/quick-response-white.webp" width="48" height="48" alt="Quick response">
+          <div class="feature-content">
+              <h3>Quick Response</h3>
+          </div>
+      </div>
+      
+      <div class="feature">
+          <img src="/images/customer-service-white.webp" width="48" height="48" alt="24/7 Support">
+          <div class="feature-content">
+              <h3>24/7 Support</h3>
+          </div>
+      </div>
+      
+      <div class="feature">
+          <img src="/images/best-customer-experience-white.webp" width="48" height="48" alt="Best Customer Experience">
+          <div class="feature-content">
+              <h3>Best Customer Experience</h3>
+          </div>
+      </div>
+  </section>
+
+    <!-- Domestic Deals Section -->
+    <!-- Domestic Deals Section -->
+<section class="domestic-deals">
+  <h2>Domestic Flight Deals</h2>
+  <p>Planning a trip within Australia soon? Catchaflight can help you save on your domestic flight tickets. Connect with our travel experts for the best prices on flights to your dream destination and enjoy a seamless booking experience.</p>
+
+  <div class="deals-grid" id="domesticDealsGrid">
+      <!-- Deal Cards -->
+      <div class="deal-card">
+          <div class="deal-info">
+              <h3>SYD → MEL</h3>
+              <p>Sydney → Melbourne</p>
+              <p>Apr 20, 2025</p>
+          </div>
+          <a href="https://catchaflight.golibe.com/results?from=SYD&to=MEL&flightClass=ECO&departureDate=2025-04-20&returnDate&ADT=1" class="deal-link">
+              <div class="deal-price">80.00 AUD</div>
+          </a>
+      </div>
+
+      <div class="deal-card">
+          <div class="deal-info">
+              <h3>BNE → SYD</h3>
+              <p>Brisbane → Sydney</p>
+              <p>Apr 15, 2025</p>
+          </div>
+          <a href="https://catchaflight.golibe.com/results?from=BNE&to=SYD&flightClass=ECO&departureDate=2025-04-15&returnDate&ADT=1" class="deal-link">
+              <div class="deal-price">74.00 AUD</div>
+          </a>
+      </div>
+
+      <div class="deal-card">
+          <div class="deal-info">
+              <h3>PER → MEL</h3>
+              <p>Perth → Melbourne</p>
+              <p>May 10, 2025</p>
+          </div>
+          <a href="https://catchaflight.golibe.com/results?from=PER&to=MEL&flightClass=ECO&departureDate=2025-05-10&returnDate&ADT=1" class="deal-link">
+              <div class="deal-price">163.00 AUD</div>
+          </a>
+      </div>
+
+      <!-- Hidden Deals (Initially Hidden) -->
+      <div class="deal-card hidden">
+          <div class="deal-info">
+              <h3>ADL → SYD</h3>
+              <p>Adelaide → Sydney</p>
+              <p>May 05, 2025</p>
+          </div>
+          <a href="https://catchaflight.golibe.com/results?from=ADL&to=SYD&flightClass=ECO&departureDate=2025-05-05&returnDate&ADT=1" class="deal-link">
+              <div class="deal-price">93.00 AUD</div>
+          </a>
+      </div>
+
+      <div class="deal-card hidden">
+          <div class="deal-info">
+              <h3>SYD → OOL</h3>
+              <p>Sydney → Gold Coast</p>
+              <p>May 07, 2025</p>
+          </div>
+          <a href="https://catchaflight.golibe.com/results?from=SYD&to=OOL&flightClass=ECO&departureDate=2025-05-07&returnDate&ADT=1" class="deal-link">
+              <div class="deal-price">51.00 AUD</div>
+          </a>
+      </div>
+
+      <div class="deal-card hidden">
+          <div class="deal-info">
+              <h3>SYD → BNE</h3>
+              <p>Sydney → Brisbane</p>
+              <p>May 02, 2025</p>
+          </div>
+          <a href="https://catchaflight.golibe.com/results?from=SYD&to=BNE&flightClass=ECO&departureDate=2025-05-02&returnDate&ADT=1" class="deal-link">
+              <div class="deal-price">63.00 AUD</div>
+          </a>
+      </div>
+  </div>
+
+  <!-- Fare Disclaimer -->
+  <div class="fare-disclaimer">
+      <p>*Fares displayed on this page are updated as of Feb 27, 2025 at 9:26 PM AEST.
+      They are for One Way or Round Trips as shown alongside. 
+      These include all Taxes and Fees and our Service Fees. 
+      Fares based on historical data can change without notice and can’t be guaranteed until the booking is
+      confirmed. For more details, read our Terms and Conditions carefully.</p>
+  </div>
+
+  <!-- Load More Button -->
+  <button class="domestic-load-more">Load More</button>
+</section>
+
+
+    <!-- Sticky Phone Call Button -->
+    <div class="sticky-phone">
+      <a href="tel:+61272559388"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> Call Us (02) 7255 9388</a>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+   
+    <script src="/js/main.js" defer></script> 
+    <script src="/js/global.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+/* Desktop-specific styles */
+@media (min-width: 992px) {
+  .hero-section {
+    padding: 4rem 0;
+  }
+
+  .hero-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Hide image on desktop */
+  .hero-image {
+    display: none;
+  }
+
+  /* Show flight search form on desktop */
+  .flight-search-box {
+    display: block;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 15px 40px rgba(0, 45, 114, 0.15);
+  }
+
+  .flight-search-box h2 {
+    color: var(--jetblue-primary);
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .flight-search-box h2 strong {
+    color: var(--jetblue-accent);
+  }
+
+  .flight-search-box p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  /* Form styling */
+  #flight-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #flight-form select,
+  #flight-form input {
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .row-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  #flight-form button {
+    background: linear-gradient(to right, var(--jetblue-accent), #FFA500);
+    color: var(--jetblue-primary);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  #flight-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 184, 28, 0.3);
+  }
+}

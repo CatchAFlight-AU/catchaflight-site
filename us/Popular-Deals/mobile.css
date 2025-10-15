@@ -1,0 +1,21 @@
+/* Popular Routes Mobile */
+.popular-routes {
+    padding: 2rem 0;
+}
+
+.route-card {
+    width: 240px;
+    margin-right: 1rem;
+}
+
+.route-image {
+    height: 140px;
+}
+
+.route-details {
+    padding: 1rem;
+}
+
+.carousel-controls {
+    margin-top: 0.5rem;
+}

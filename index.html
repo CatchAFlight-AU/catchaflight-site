@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Ads base tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17559348774" data-cfasync="false"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17559348774');
+</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catch A Flight- Home</title>
+      <!-- Primary Meta Tags -->
+    <meta name="description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+    <meta name="keywords" content="cheap flights, flight deals, book flights, domestic flights, international flights">
+    <meta name="author" content="Catchaflight">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Catchaflight - Compare & Book Cheap Flights">
+    <meta property="og:description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+    <meta property="og:url" content="https://www.catchaflight.com.au/">
+    <meta property="og:image" content="https://www.catchaflight.com.au/assets/images/og-banner.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catchaflight - Compare & Book Cheap Flights">
+    <meta name="twitter:description" content="Find and compare cheap flight deals from hundreds of airlines in one place.">
+    <meta name="twitter:image" content="https://www.catchaflight.com.au/assets/images/og-banner.jpg">
+
+
+  <!-- Preconnect & Preload Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  </noscript>
+  <link rel="preload" href="/css/styles.css" as="style" onload="this.rel='stylesheet'">
+
+
+  <!-- Preload Hero Background Image -->
+  <link rel="preload" as="image" href="/images/hero-image.webp">
+  <link rel="preload" as="image" href="/images/paris.webp" type="image/webp">
+  <link rel="preload" as="image" href="/images/newyork-720.webp" imagesrcset="/images/newyork-360.webp 360w, /images/newyork-600.webp 600w, /images/newyork-720.webp 720w" imagesizes="(max-width: 768px) 360px, (max-width: 1024px) 600px, 720px">
+  <link rel="preload" as="image" href="/images/Catchaflight-logo.webp">
+
+
+
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</noscript>
+
+<link rel="stylesheet" href="/css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="canonical" href="https://catchaflight.com.au/">
+
+</head>
+  <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTSNJBHQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <div id="header-container"></div>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-form">
+          <form id= "search-form" class="flight-search-form">
+            <div class="trip-class-wrapper">
+              <!-- Trip Type -->
+              <div class="trip-type">
+                  <select id="trip-type" name="trip" class="trip-select">
+                      <option value="round">Round Trip</option>
+                      <option value="one-way">One Way</option>
+                  </select>
+              </div>
+          
+              <!-- Class Type -->
+              <div class="class-type">
+
+                  <select id="class-type" name="class" class="class-select">
+                      <option value="economy">Economy</option>
+                      <option value="premium-economy">Premium Economy</option>
+                      <option value="business">Business</option>
+                      <option value="first">First</option>
+                  </select>
+              </div>
+          </div>
+          
+            <div class="search-fields">
+              <div class="field-group locations">
+                <div class="form-field origin">
+                  <label>Origin</label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-plane-departure"></i>
+                    <input type="text" placeholder="SYD" data-airport="from">
+                  </div>
+                </div>
+                <div class="form-field destination">
+                  <label>Destination</label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-plane-arrival"></i>
+                    <input type="text" placeholder="LON" data-airport="to">
+                  </div>
+                </div>
+              </div>
+              <div class="field-group dates">
+                <div class="form-field">
+                  <label>Departing</label>
+                  <div class="input-wrapper">
+                    <i class="far fa-calendar-alt"></i>
+                    <input type="date" placeholder="Departure">
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label>Returning</label>
+                  <div class="input-wrapper">
+                    <i class="far fa-calendar-alt"></i>
+                    <input type="date" placeholder="Return">
+                  </div>
+                </div>
+              </div>
+              <div class="field-group passengers">
+                <div class="form-field passenger-count">
+                    <label for="adult-passenger">Adult</label>
+                    <div class="counter">
+                        <button type="button" class="counter-btn minus">-</button>
+                        <input id="adult-passenger" type="number" value="1" min="1" max="9" data-passenger="adult">
+                        <button type="button" class="counter-btn plus">+</button>
+                    </div>
+                </div>
+
+                <div class="form-field passenger-count">
+                  <label for="child-passenger">Child <span class="age-limit">(2-12)</span></label>
+                  <div class="counter">
+                    <button type="button" class="counter-btn minus">-</button>
+                    <input id="child-passenger" type="number" value="0" min="0" max="9" data-passenger="child">
+                    <button type="button" class="counter-btn plus">+</button>
+                  </div>
+                </div>
+                <div class="form-field passenger-count">
+                  <label for="infant-passenger">Infant <span class="age-limit">(0-2)</span></label>
+                  <div class="counter">
+                    <button type="button" class="counter-btn minus">-</button>
+                    <input id="infant-passenger" type="number" value="0" min="0" max="9" data-passenger="infant">
+                    <button type="button" class="counter-btn plus">+</button>
+                  </div>
+                </div>
+                <div class="form-field passenger-count">
+                  <label for="flexibility">Flexibility</label>
+                  <div class="counter">
+                    <button type="button" class="counter-btn minus">-</button>
+                    <input id="flexibility" type="number" value="0" min="0" max="1" readonly class="flexibility-input">
+                    <button type="button" class="counter-btn plus">+</button>
+                  </div>
+                  <div class="flexibility-label">No flexibility</div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="search-button">
+              <i class="fas fa-search"></i>
+              Search Flights
+            </button>
+          </form>
+        </div>
+        <div class="hero-content">
+          <h1>Compare, book, and Catch A <span class="alternating-text">Flight</span></h1>
+          <p>Compare over 400+ airlines</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="features">
+      <div class="feature">
+          <img src="images/guarantee-white.webp" width="48" height="48" alt="Customer Satisfaction">
+          <div class="feature-content">
+              <h3>Customer Satisfaction</h3>
+          </div>
+      </div>
+      
+      <div class="feature">
+          <img src="images/quick-response-white.webp" width="48" height="48" alt="Quick response">
+          <div class="feature-content">
+              <h3>Quick Response</h3>
+          </div>
+      </div>
+      
+      <div class="feature">
+          <img src="images/customer-service-white.webp" width="48" height="48" alt="24/7 Support">
+          <div class="feature-content">
+              <h3>24/7 Support</h3>
+          </div>
+      </div>
+      
+      <div class="feature">
+          <img src="images/best-customer-experience-white.webp" width="48" height="48" alt="Best Customer Experience">
+          <div class="feature-content">
+              <h3>Best Customer Experience</h3>
+          </div>
+      </div>
+  </section>
+
+
+  <section id="popular-destinations" class="destinations">
+    <div class="container">
+        <h2>Popular Destinations</h2>
+        <div class="destinations-grid">
+            <div class="destination-card">
+              <img
+              src="/images/newyork-720.webp"
+              srcset="
+              /images/newyork-360.webp 360w,
+              /images/newyork-600.webp 600w,
+              /images/newyork-720.webp 720w"
+              sizes="(max-width: 768px) 360px, (max-width: 1024px) 600px, 720px"
+              width="720" height="318"
+              alt="New York"
+              loading="lazy" decoding="async"
+              />
+                <div class="destination-overlay"></div>
+                <div class="destination-info">
+                    <h3>New York</h3>
+                    <p>United States</p>
+                    <p class="price">from AUD 1750* roundtrip</p>
+                </div>
+            </div>
+            <div class="destination-card">
+              <img
+              src="/images/paris-720.webp"
+              srcset="
+              /images/paris-360.webp 360w,
+              /images/paris-600.webp 600w,
+              /images/paris-720.webp 720w"
+              sizes="(max-width: 768px) 360px, (max-width: 1024px) 600px, 720px"
+              width="720" height="318"
+              alt="Paris"
+              loading="lazy" decoding="async"
+              />
+                <div class="destination-overlay"></div>
+                <div class="destination-info">
+                    <h3>Paris</h3>
+                    <p>France</p>
+                    <p class="price">from AUD1250* roundtrip</p>
+                </div>
+            </div>
+            <div class="destination-card">
+              <img
+              src="/images/tokyo-720.webp"
+              srcset="
+              /images/tokyo-360.webp 360w,
+              /images/tokyo-600.webp 600w,
+              /images/tokyo-720.webp 720w"
+              sizes="(max-width: 768px) 360px, (max-width: 1024px) 600px, 720px"
+              width="720" height="318"
+              alt="Tokyo"
+              loading="lazy" decoding="async"
+              />
+                <div class="destination-overlay"></div>
+                <div class="destination-info">
+                    <h3>Tokyo</h3>
+                    <p>Japan</p>
+                    <p class="price">from AUD700* roundtrip</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Deals Section -->
+<!-- Popular Deals Section -->
+<section id="popular-deals" class="popular-deals">
+  <h2>Popular Deals</h2>
+  <p>Come let's fly</p>
+  <div class="deals-grid" id="dealsGrid">
+      <div class="deal-card"> <div class="deal-info"><img src="images/qa.webp" width="85" height="48" alt="Airline Logo" class="airline-logo"> 
+        <h3>SYD → MEL</h3><p>Apr-17 - Apr-20</p></div>
+        <a href="https://catchaflight.golibe.com/results?from=SYD&to=MEL&flightClass=ECO&departureDate=2025-04-17&returnDate=2025-04-20&ADT=1
+      "><button class="book-now">Book Now</button></a> </div>
+      <div class="deal-card"> <div class="deal-info"><img src="images/batik.webp" width="93" height="70" alt="Airline Logo" class="airline-logo"> <h3>SYD → PER</h3><p>Apr-20 - Apr-28</p></div>
+      <a href="https://catchaflight.golibe.com/results?from=SYD&to=PER&flightClass=ECO&departureDate=2025-04-20&returnDate=2025-04-28&ADT=1">
+      <button class="book-now">Book Now</button></a> </div>
+      <div class="deal-card"> <div class="deal-info"><img src="images/ai.webp" width="77" height="48" alt="Airline Logo" class="airline-logo"> <h3>SYD → DEL</h3><p>Apr-17 - Apr-24</p></div> 
+      <a href="https://catchaflight.golibe.com/results?from=SYD&to=DEL&flightClass=ECO&departureDate=2025-04-17&returnDate=2025-04-24&ADT=1">
+      <button class="book-now">Book Now</button></a> </div>
+      <div class="deal-card hidden"> <div class="deal-info"><img src="images/jetstar.webp" width="76" height="48" alt="Airline Logo" class="airline-logo"> <h3>SYD → ADL</h3><p>Apr-10 - Apr-24</p></div>
+      <a href="https://catchaflight.golibe.com/results?from=SYD&to=ADL&flightClass=ECO&departureDate=2025-04-10&returnDate=2025-04-24&ADT=1">
+      <button class="book-now">Book Now</button></a> </div>
+      <div class="deal-card hidden"> <div class="deal-info"><img src="images/va.webp" width="105" height="70" alt="Airline Logo" class="airline-logo"> <h3>SYD → BNE</h3><p>Apr-13 - Apr-26</p></div>
+      <a href="https://catchaflight.golibe.com/results?from=SYD&to=BNE&flightClass=ECO&departureDate=2025-04-13&returnDate=2025-04-26&ADT=1">
+      <button class="book-now">Book Now</button></a> </div>
+      <div class="deal-card hidden"> <div class="deal-info"><img src="images/ba.webp" width="70" height="70" alt="Airline Logo" class="airline-logo"> <h3>SYD → LON</h3><p>Apr-10 - Apr-24</p></div>
+      <a href="https://catchaflight.golibe.com/results?from=SYD&to=LON&flightClass=ECO&departureDate=2025-04-10&returnDate=2025-04-24&ADT=1">
+      <button class="book-now">Book Now</button></a> </div>
+  </div>
+  <button class="load-more">Load More</button>
+</section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+          <div class="container">
+              <h2>Subscribe to Our Newsletter</h2>
+              <p>Get the latest deals and travel updates delivered straight to your inbox.</p>
+              <form class="newsletter-form">
+                  <input type="email" placeholder="Enter your email">
+                  <button type="submit">Subscribe</button>
+              </form>
+          </div>
+      </section>
+
+      
+
+
+
+
+   
+
+<div class="sticky-phone">
+  <a href="tel:+61272559388"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> Call Us (02) 7255 9388</a>
+</div>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/674d12ab4304e3196aeb3347/1ie2h1re1';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+<div id="footer-container"></div>
+<script src="/js/main.js" defer></script> 
+<script src="/js/global.js" defer></script> 
+  </body>
+</html>

@@ -1,0 +1,28 @@
+/* Mobile-specific adjustments */
+@media (max-width: 599px) {
+  .hero-section {
+    padding: 1.5rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1rem;
+  }
+
+  .agent-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-cta-btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .flight-search-box {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,97 @@
+:root {
+  --jetblue-primary: #002D72;
+  --jetblue-secondary: #6EC1E4;
+  --jetblue-accent: #FFB81C;
+  --text-light: #FFFFFF;
+  --text-dark: #333333;
+  --bg-light: #F0F2F5;
+  --border-color: #CCCCCC;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--jetblue-primary), #0A235C);
+  color: white;
+  padding: 2rem 0;
+}
+
+.hero-content h1 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero-content h1 span {
+  color: var(--jetblue-accent);
+}
+
+.hero-subheadline {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.agent-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1.5rem auto;
+  border: 3px solid var(--jetblue-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.agent-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: linear-gradient(to right, var(--jetblue-accent), #FFA500);
+  color: var(--jetblue-primary);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(255, 184, 28, 0.3);
+  margin: 0 auto 2rem;
+  width: fit-content;
+  text-align: center;
+}
+
+.flight-search-box {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-top: 1rem;
+}
+
+/* Form styling remains the same as before */
+/* ... */

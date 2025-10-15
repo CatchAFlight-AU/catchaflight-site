@@ -1,0 +1,249 @@
+/* CSS Variables and Base Reset */
+:root {
+  --primary: #00308F;
+  --primary-light: #2A52BE;
+  --secondary: #FFC72C;
+  --white: #FFFFFF;
+  --light-gray: #F8F9FA;
+  --dark-gray: #212529;
+  --success: #28A745;
+  --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background-color: var(--white);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Shared Hero Section Styles */
+.hero-section {
+  background-color: var(--light-gray);
+  padding: 2rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Typography (Shared) */
+h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+h1 span {
+  color: var(--primary-light);
+  position: relative;
+  display: inline-block;
+}
+
+h1 span::after {
+  content: '';
+  position: absolute;
+  bottom: 0.2em;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  background-color: var(--secondary);
+  z-index: -1;
+}
+
+/* Perks List (Shared) */
+.hero-perks {
+  list-style: none;
+}
+
+.hero-perks li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.hero-perks li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: bold;
+}
+
+/* CTA Button - Base Styles */
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Phone icon styling */
+.hero-cta-btn i {
+  transition: transform 0.3s ease;
+}
+
+/* Accessibility focus state */
+.hero-cta-btn:focus {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta-btn {
+    animation: none;
+    transition: none;
+  }
+  
+  .hero-cta-btn:hover i {
+    transform: none;
+  }
+}
+
+/* Hero Image (Shared) */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* Stats (Shared) */
+.hero-flight-count {
+  color: var(--dark-gray);
+}
+
+.hero-stars {
+  color: var(--secondary);
+}
+
+/* Accessibility (Shared) */
+a:focus, button:focus {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
+}
+
+
+/* Footer */
+footer {
+  background: grey;
+  color: white;
+  padding: 4rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-col h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-col p {
+  color: var(--color-gray-400);
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: var(--color-gray-400);
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: white;
+}
+
+.social-links i {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul a {
+  color: var(--color-gray-400);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col ul a:hover {
+  color: white;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-gray-400);
+}
+
+.contact-info i {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-gray-800);
+  text-align: center;
+  color: var(--color-gray-400);
+}

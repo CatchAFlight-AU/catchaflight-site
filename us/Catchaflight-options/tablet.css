@@ -1,0 +1,50 @@
+/* ===== TABLET STYLES (min-width: 600px) ===== */
+@media (min-width: 600px) {
+    .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .agency-services h2 {
+        font-size: 1.8rem;
+    }
+
+    .subhead {
+        font-size: 1.1rem;
+        padding: 0 2rem;
+    }
+
+    .value-card {
+        margin: 0;
+    }
+
+    .fare-type {
+        padding: 1.5rem;
+    }
+
+    .fare-type i {
+        font-size: 2rem;
+    }
+
+    .fare-type h3 {
+        font-size: 1.4rem;
+    }
+
+    .agency-benefits {
+        padding: 1.5rem;
+    }
+
+ @media (min-width: 600px) {
+    .price-example {
+        text-align: center; /* Add this line */
+        margin: 0 auto 1rem; /* Changed from margin: 0 2rem 1rem */
+        width: calc(100% - 3rem); /* Adjust width to maintain padding */
+    }
+}
+
+    .agency-cta {
+        width: calc(100% - 3rem);
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,38 @@
+/* ===== TABLET STYLES ===== */
+@media (min-width: 600px) {
+    /* Testimonials */
+    .testimonials {
+        padding: 2.5rem 0;
+    }
+    
+    .testimonial-card {
+        width: 60%;
+    }
+    
+    .testimonial-controls {
+        margin-top: 2rem;
+    }
+
+    /* Final CTA */
+    .final-cta {
+        padding: 3rem 0;
+    }
+    
+    .final-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-highlights {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    .cta-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .cta-separator {
+        margin: 0 1rem;
+    }
+}

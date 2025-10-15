@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnderPricer - Phone-Only Flight Deals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .subheading {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .search-form {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 204, 0, 0.3);
+        }
+        
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-options {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+        .option.active {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-field label {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .form-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 14px 15px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #ffcc00;
+            background: rgba(255, 204, 0, 0.1);
+        }
+        
+        .search-btn {
+            background: linear-gradient(to right, #ffcc00, #ff9900);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            padding: 16px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .search-btn:hover {
+            background: linear-gradient(to right, #ff9900, #ffcc00);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .feature i {
+            color: #ffcc00;
+            font-size: 1.5rem;
+        }
+        
+        .phone-deal {
+            text-align: center;
+            background: rgba(255, 204, 0, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 204, 0, 0.3);
+        }
+        
+        .phone-deal h3 {
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffcc00;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .phone-number:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            opacity: 0.4;
+        }
+        
+        .desktop-bg {
+            background-image: url('https://images.unsplash.com/photo-1500835556837-99ac94a94552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');
+        }
+        
+        .mobile-bg {
+            background-image: url('https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80');
+            display: none;
+        }
+        
+        .disclaimer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 25px 20px;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.4rem;
+            }
+            
+            .subheading {
+                font-size: 1rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .phone-number {
+                font-size: 1.5rem;
+            }
+            
+            .desktop-bg {
+                display: none;
+            }
+            
+            .mobile-bg {
+                display: block;
+            }
+            
+            .form-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .form-options {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .search-form {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-container">
+        <!-- Background Images -->
+        <div class="hero-bg desktop-bg"></div>
+        <div class="hero-bg mobile-bg"></div>
+        
+        <div class="hero-content">
+            <div class="hero-header">
+                <div class="logo">UnderPricer</div>
+                <div class="tagline">PHONE-ONLY FLIGHT DEALS</div>
+                <p class="subheading">Save up to 50%* OFF flights all over the world. Take advantage of the price savings and book now!</p>
+            </div>
+            
+            <div class="search-form">
+                <div class="form-header">
+                    <div class="form-options">
+                        <div class="option active">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Round-trip</span>
+                        </div>
+                        <div class="option">
+                            <i class="fas fa-user"></i>
+                            <span>1 traveler</span>
+                        </div>
+                        <div class="option">
+                            <i class="fas fa-chair"></i>
+                            <span>Economy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label>From</label>
+                        <input type="text" class="form-input" placeholder="Delhi (DEL)" value="Delhi (DEL)">
+                    </div>
+                    <div class="form-field">
+                        <label>To</label>
+                        <input type="text" class="form-input" placeholder="City or Airport">
+                    </div>
+                    <div class="form-field">
+                        <label>Departure</label>
+                        <input type="text" class="form-input" placeholder="Sun, Aug 17" value="Sun, Aug 17">
+                    </div>
+                    <div class="form-field">
+                        <label>Return</label>
+                        <input type="text" class="form-input" placeholder="Sun, Aug 31" value="Sun, Aug 31">
+                    </div>
+                </div>
+                
+                <button class="search-btn">
+                    <i class="fas fa-search"></i> Search Flights
+                </button>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-laptop"></i>
+                    <span>Easy Online Booking</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <span>Day & night online support</span>
+                </div>
+            </div>
+            
+            <div class="phone-deal">
+                <h3>Phone Only Deals:</h3>
+                <a href="tel:8776072795" class="phone-number">
+                    <i class="fas fa-phone"></i> (877) 607-2795
+                </a>
+            </div>
+            
+            <p class="disclaimer">*Discounts apply to select flights and dates. Terms and conditions apply.</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to toggle active class on options
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove active class from all options in the same container
+                this.parentNode.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('active');
+                });
+                
+                // Add active class to clicked option
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

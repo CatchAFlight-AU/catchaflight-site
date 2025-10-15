@@ -1,0 +1,283 @@
+/* === SOUTHWEST FLIGHT OPTIONS SECTION - FINAL CSS === */
+:root {
+  --jetblue-blue: #0d47a1;
+  --jetblue-light: #e3f2fd;
+  --mint-green: #2e7d32;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --card-radius: 12px;
+  --fade-in: all 0.3s ease-in-out;
+}
+
+.agency-services {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+}
+
+.agency-services h2 {
+  text-align: center;
+  color: var(--jetblue-blue);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.agency-services .subhead {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.value-card {
+  background-color: #fff;
+  border-radius: var(--card-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--fade-in);
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.fare-type {
+  padding: 2.8rem 1.5rem 1.5rem; /* increased top padding to avoid label/icon overlap */
+  text-align: center;
+  position: relative;
+}
+
+.fare-type i {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  color: #007aff;
+  z-index: 1;
+  position: relative;
+}
+
+.fare-type h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0d47a1;
+  margin-top: 0.3rem;
+}
+
+/* === FARE LABEL STYLING === */
+.fare-label {
+  display: inline-block;
+  background-color: #007aff;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.fare-label.business { background-color: #0b3c8a; }  /* Deep blue */
+.fare-label.anytime { background-color: #00796b; }   /* Teal green */
+.fare-label.plus    { background-color: #e65100; }   /* Burnt orange */
+.fare-label.basic   { background-color: #37474f; }   /* Charcoal gray */
+
+.agency-benefits {
+  list-style: none;
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.agency-benefits li {
+  padding-left: 1.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.agency-benefits li i {
+  position: absolute;
+  left: 0;
+  color: var(--jetblue-blue);
+}
+
+.price-example {
+  background-color: var(--jetblue-light);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 0 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #0d47a1;
+}
+
+.price-example i {
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
+}
+
+.price-example .route {
+  font-weight: 600;
+}
+
+.price-example .price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #b71c1c; /* darker red for better contrast */
+}
+
+.price-example .dates {
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.agency-cta {
+  background-color: #e65100; /* Dark orange */
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 6px;
+  margin: 1rem auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.agency-cta:hover {
+  background-color: #bf360c; /* Even darker on hover */
+}
+
+
+.agency-cta i {
+  margin-right: 8px;
+}
+
+/* === RESPONSIVE === */
+@media (min-width: 600px) {
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .value-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .agency-services h2 {
+    font-size: 2.4rem;
+  }
+  .agency-services .subhead {
+    font-size: 1.2rem;
+  }
+}
+
+/* === ICON ANIMATION === */
+.icon-bounce {
+  animation: bounce 1.2s infinite alternate;
+}
+.icon-pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5px); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.callback-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--jetblue-blue);
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-content button[type="submit"] {
+  margin-top: 1.5rem;
+  background-color: var(--mint-green);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #1b5e20;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.4rem;
+  color: #333;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

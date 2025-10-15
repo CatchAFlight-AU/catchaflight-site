@@ -1,0 +1,67 @@
+# -------------------------------------------
+# ✅ Enable LiteSpeed Full Page Cache
+# -------------------------------------------
+<IfModule LiteSpeed>
+  CacheEnable public /
+  CacheLookup public on
+  Header set Cache-Control "public, max-age=0, s-maxage=3600"
+</IfModule>
+
+# -------------------------------------------
+# ✅ Compression (Gzip / Brotli Fallback)
+# -------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/xml text/plain image/svg+xml
+</IfModule>
+
+# -------------------------------------------
+# ✅ Asset Caching for CSS, JS, Images
+# -------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType application/x-javascript "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# -------------------------------------------
+# ✅ Fallback: Force correct MIME types
+# -------------------------------------------
+AddType application/javascript .js
+AddType text/css .css
+AddType image/webp .webp
+
+# -------------------------------------------
+# ✅ Optional: Redirect non-www to www (or vice versa)
+# -------------------------------------------
+# Uncomment if you want to force www
+# RewriteEngine On
+# RewriteCond %{HTTP_HOST} ^catchaflight\.com\.au [NC]
+# RewriteRule ^(.*)$ https://www.catchaflight.com.au/$1 [L,R=301]
+
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  # CSS and JS
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|webp|png|jpe?g|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+

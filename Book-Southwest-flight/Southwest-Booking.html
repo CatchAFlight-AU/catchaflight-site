@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JetBlue Flight Deals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Hero-section/hero-section.css">
+  <link rel="stylesheet" href="Hero-section/hero-section-fixed.css">
+  <link rel="stylesheet" href="form-section/form-section.css">
+  <link rel="stylesheet" href="Trust-section/trust-section.css">
+ <link rel="stylesheet" href="Catchaflight-JetBlue-Options/cjb.css">
+  <link rel="stylesheet" href="Popular-Deals/popular-deals.css">
+   <link rel="stylesheet" href="Testimonial-section/base.css">
+   <link rel="stylesheet" href="Testimonial-section/mobile.css">
+   <link rel="stylesheet" href="Testimonial-section/tablet.css">
+   <link rel="stylesheet" href="Testimonial-section/desktop.css">
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-container">
+
+    <!-- Left Column: Hero Text -->
+    <div class="hero-text">
+      <h1>
+        Book Southwest Flights With<br>
+        <span>Live Travel Experts</span><br>
+        Save Up to 30% Today
+      </h1>
+
+      <p class="hero-subheadline">
+        Speak to a real expert for instant seat confirmation, fare match, and faster Southwest booking support.
+      </p>
+
+      <ul class="hero-perks">
+        <li>Real-time Fare Lookup</li>
+        <li>Last-Minute Deals</li>
+        <li>24/7 Booking Support</li>
+      </ul>
+
+      <a href="tel:+13052045332" class="hero-cta-btn pulse">
+        <i class="fas fa-phone"></i>
+        <span>CALL NOW – Speak to an Agent</span>
+      </a>
+
+      <div class="hero-image show-on-mobile">
+        <img src="/images/Marshall.webp" alt="Support Agent" width="300" height="300" loading="eager" decoding="async">
+      </div>
+
+      <p class="hero-flight-count">Over 18,700 Flights Booked This Year</p>
+      <div class="hero-stars">★★★★★</div>
+    </div>
+
+    <!-- Right Column: Flight Search Form -->
+    <div class="hero-form">
+      <section class="flight-search-box">
+        <h2>Phone-Only <strong>Flight Deals</strong></h2>
+        <p>Save up to 50%* OFF flights all over the world.<br>Take advantage of the price savings and book now!</p>
+
+        <form id="flight-form" action="https://formspree.io/f/xvgrvgye" method="POST">
+
+          <!-- Step 1 -->
+          <div id="step-1">
+            <select id="trip-type" name="trip_type" required>
+              <option value="round">Round-trip</option>
+              <option value="oneway">One-way</option>
+            </select>
+
+            <div class="autocomplete-wrapper">
+              <input type="text" placeholder="From Airport" data-airport="from" required />
+            </div>
+
+            <div class="autocomplete-wrapper">
+              <input type="text" placeholder="To Airport" data-airport="to" required />
+            </div>
+
+            <div class="row-group">
+              <label>Adults:
+                <select id="adults" name="adults" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </label>
+
+              <label>Children:
+                <select id="children" name="children" required>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </label>
+
+              <label>Infants:
+                <select id="infants" name="infants" required>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </label>
+
+              <label>Cabin Class:
+                <select id="cabin-class" name="cabin_class" required>
+                  <option value="economy">Economy</option>
+                  <option value="premium">Premium Economy</option>
+                  <option value="business">Business</option>
+                  <option value="first">First Class</option>
+                </select>
+              </label>
+            </div>
+
+            <button type="button" id="next-step-1">Next</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div id="step-2" style="display: none;">
+              <label for="departure-date">Departure Date</label>
+            <input type="date" id="depart-date" name="depart_date" required />
+            <label for="return-date">Return Date</label>
+            <input type="date" id="return-date" name="return_date" />
+            <button type="button" id="next-step-2">Next</button>
+          </div>
+
+          <!-- Step 3 -->
+          <div id="step-3" style="display: none;">
+            <input type="text" id="contact-name" name="full_name" placeholder="Full Name" required />
+            <input type="text" id="contact-phone" name="phone_number" placeholder="Phone Number" required />
+            <input type="email" id="contact-email" name="email_address" placeholder="Email Address" required />
+            <button type="submit">Search Flights</button>
+          </div>
+
+          <!-- Hidden fields for IATA -->
+          <input type="hidden" name="from_iata" id="from-iata" />
+          <input type="hidden" name="to_iata" id="to-iata" />
+        </form>
+      </section>
+    </div>
+
+  </div>
+</section>
+
+<section class="trust-section">
+  <div class="container">
+    <h2>Why Thousands of Travelers Trust Our Southwest Flight Experts</h2>
+    <p class="trust-subheadline">We're not just another booking site - we're your personal flight specialists</p>
+    
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Airline-Certified Experts</h3>
+        <p>Our agents complete official certifications program annually to provide you with the most accurate information.</p>
+      </div>
+      
+      <div class="trust-card">
+        <div class="trust-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>Real-Time Availability</h3>
+        <p>We access live seat availabilty and pricing directly from Southwest inventory - no outdated listings or false promises.</p>
+      </div>
+      
+      <div class="trust-card">
+        <div class="trust-icon">
+          <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <h3>Price Match Guarantee</h3>
+        <p>Found a better deal? We'll match it and still provide our expert service at no additional cost.</p>
+      </div>
+      
+      <div class="trust-card">
+        <div class="trust-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3>Dedicated Support</h3>
+        <p>Get direct access to your booking specialist even after purchase for any changes or questions.</p>
+      </div>
+    </div>
+    
+    <div class="trust-cta">
+      <a href="tel:+13052045332" class="trust-cta-btn pulse">
+        SPEAK TO A SOUTHWEST FLIGHT SPECIALIST NOW
+      </a>
+      <p class="trust-cta-note">
+        <i class="fas fa-check-circle"></i> Your information is secure and will never be shared
+      </p>
+    </div>
+  </div>
+  </section>
+
+<!-- Southwest Fare Types Section -->
+<section class="fare-types">
+  <h2>Southwest Flight Options Through CatchaFlight</h2>
+  <p class="subhead">How we enhance your Southwest travel experience</p>
+
+  <div class="fare-accordion">
+    <div class="fare-item">
+      <button class="accordion-btn">💼 Business Select</button>
+      <div class="fare-content">
+        <p>
+          Enjoy priority boarding (A1–A15), a complimentary premium drink, and maximum Rapid Rewards points. Perfect for business or last-minute travelers.
+        </p>
+      </div>
+    </div>
+
+    <div class="fare-item">
+      <button class="accordion-btn">⚡ Anytime</button>
+      <div class="fare-content">
+        <p>
+          Fully refundable with no change fees, this fare offers flexibility and priority standby. Ideal for travelers who value schedule freedom.
+        </p>
+      </div>
+    </div>
+
+    <div class="fare-item">
+      <button class="accordion-btn">✅ Wanna Get Away</button>
+      <div class="fare-content">
+        <p>
+          A budget-friendly fare with limited flexibility. Includes 2 free checked bags and flight credit on cancellations. Popular among vacation travelers.
+        </p>
+      </div>
+    </div>
+
+    <div class="fare-item">
+      <button class="accordion-btn">🛍️ Wanna Get Away Plus</button>
+      <div class="fare-content">
+        <p>
+          All perks of Wanna Get Away, plus same-day confirmed changes and transferable flight credit. A smart pick for flexibility at a lower price.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .fare-types {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .fare-accordion {
+    margin-top: 1.5rem;
+  }
+
+  .fare-item {
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .accordion-btn {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background: #f8f8f8;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background 0.3s ease;
+  }
+
+  .accordion-btn:hover {
+    background: #e0f0ff;
+  }
+
+  .fare-content {
+    padding: 1rem;
+    display: none;
+    background: #fff;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .fare-content p {
+    margin: 0;
+  }
+
+  .accordion-btn.active + .fare-content {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .subhead {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const content = btn.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+
+<section class="legal-disclaimer">
+    <div class="container">
+        <h3>Important Notice</h3>
+        <p><strong>"JetBlue," "Blue Basic," "Blue," "Blue Extra," and "Mint"</strong> are registered trademarks of JetBlue Airways Corporation.</p>
+        
+        <p>CatchaFlight Travel Agency is an <strong>independent travel service provider</strong> and is not affiliated with, endorsed by, or sponsored by JetBlue Airways. All references to JetBlue products, services, or fares are for informational purposes only.</p>
+        
+        <p>All fare descriptions, benefits, and pricing information shown reflects our understanding of JetBlue's current offerings as of [current date]. <strong>Actual fares, rules, and availability are set by JetBlue</strong> and may change without notice. Our agency provides booking assistance and travel planning services but does not control airline operations or pricing.</p>
+        
+        <p>Sample prices shown are <strong>estimates only</strong> based on historical bookings and are not guaranteed. Final pricing will be confirmed at time of booking.</p>
+    </div>
+</section>
+
+<section class="popular-routes">
+    <div class="container">
+        <h2>Popular Routes & Deals</h2>
+        <p class="subhead">Best flight deals we found for you</p>
+        
+        <div class="routes-carousel">
+            <!-- Sample Flight Card 1 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">HOT DEAL</span>
+                </div>
+                <div class="route-details">
+                    <h3>NYC → Miami</h3>
+                    <p class="route-dates">Jun 10-17, 2024</p>
+                    <p class="route-price">$129 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+            <!-- Repeat similar cards for 19 more flights (total 20) -->
+            <!-- Sample Flight Card 2 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+             <!-- Sample Flight Card 3-->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+             <!-- Sample Flight Card 4 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+             <!-- Sample Flight Card 5 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+             <!-- Sample Flight Card 6 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+            
+             <!-- Sample Flight Card 7-->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+            
+             <!-- Sample Flight Card 8 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+            
+             <!-- Sample Flight Card 9 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+             <!-- Sample Flight Card 11 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+             <!-- Sample Flight Card 12 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+            
+             <!-- Sample Flight Card 13 -->
+            <div class="route-card">
+                <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    <span class="deal-badge">LIMITED</span>
+                </div>
+                <div class="route-details">
+                    <h3>LAX → Las Vegas</h3>
+                    <p class="route-dates">Jun 15-22, 2024</p>
+                    <p class="route-price">$99 <span>roundtrip</span></p>
+                    <button class="route-cta">Call Now</button>
+                </div>
+            </div>
+    <div class="carousel-controls">
+            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+            
+            <!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2>What Our Customers Say</h2>
+        <p class="subhead">Hear from travelers across the US</p>
+        
+        <div class="testimonials-carousel">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="customer-info">
+                        <h4>Sarah K.</h4>
+                        <p class="location">New York, NY</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>"CatchaFlight found me an amazing deal to Miami that saved me over $200 compared to other sites. Their customer service was exceptional when I needed to make a last-minute change."</p>
+                    <div class="testimonial-date">June 15, 2024</div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="customer-info">
+                        <h4>Michael T.</h4>
+                        <p class="location">Chicago, IL</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>"The seat selection advice was spot on! Got the perfect seats for my family vacation to Orlando. Will definitely use CatchaFlight for all our future travels."</p>
+                    <div class="testimonial-date">May 28, 2024</div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="customer-info">
+                        <h4>Jennifer L.</h4>
+                        <p class="location">Austin, TX</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>"Their price monitoring caught a fare drop and saved me $150 on my flight to Seattle. The automatic alert system is worth every penny!"</p>
+                    <div class="testimonial-date">April 12, 2024</div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="customer-info">
+                        <h4>David R.</h4>
+                        <p class="location">San Diego, CA</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>"The contingency planning saved my business trip when my original flight was canceled. They had me rebooked before I even knew there was an issue!"</p>
+                    <div class="testimonial-date">March 30, 2024</div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="customer-info">
+                        <h4>Emily S.</h4>
+                        <p class="location">Denver, CO</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>"As a frequent flyer, I appreciate how CatchaFlight understands the nuances of different fare classes. Their advice helped me maximize my travel budget."</p>
+                    <div class="testimonial-date">February 18, 2024</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-controls">
+            <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-dots"></div>
+            <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="final-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready for Your Perfect Flight Experience?</h2>
+            <p class="cta-subhead">Our travel experts are standing by to craft your ideal itinerary at the best possible price.</p>
+            
+            <div class="cta-highlights">
+                <div class="highlight-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No-hassle booking</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>24/7 customer support</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Best price guarantee</span>
+                </div>
+            </div>
+            
+            <div class="cta-actions">
+                <a href="tel:+18005551234" class="cta-button cta-primary">
+                    <i class="fas fa-phone"></i> Call Now: (800) 555-1234
+                </a>
+                <div class="cta-separator">or</div>
+                <button class="cta-button cta-secondary open-modal">
+                    <i class="fas fa-envelope"></i> Request Callback
+                </button>
+            </div>
+            
+            <div class="cta-guarantee">
+                <i class="fas fa-shield-alt"></i>
+                <span>100% Satisfaction Guarantee - We don't get paid until you're happy</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JS -->
+<script src="form-section/form-section.js"></script>
+<script src="/js/airport-autocomplete.js"></script>
+<script src="Catchaflight-JetBlue-Options/script.js"></script>
+<script src="Popular-Deals/carousel.js"></script> 
+<script src="Testimonial-section/testimonials.js"></script>
+</body>
+</html>

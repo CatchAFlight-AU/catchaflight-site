@@ -1,0 +1,173 @@
+/* ===========================
+   Catch A Flight — Trust Section
+   Always 2×2 grid (mobile too)
+   =========================== */
+
+:root {
+  --primary: #00308F;
+  --primary-light: #2A52BE;
+  --secondary: #FFC72C;
+  --white: #FFFFFF;
+  --light-gray: #F8F9FA;
+  --dark-gray: #212529;
+  --gray-600: #6C757D;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Base resets for this block */
+.trust-section * {
+  box-sizing: border-box;
+}
+.trust-section img,
+.trust-section svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Section wrapper */
+.trust-section {
+  background-color: var(--light-gray);
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--dark-gray);
+}
+
+/* Container */
+.trust-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-inline: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Headings & subheadline */
+.trust-section h2 {
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.25rem, 3.8vw, 1.8rem);
+}
+
+.trust-subheadline {
+  margin: 0 auto clamp(1.5rem, 4vw, 2.5rem);
+  max-width: 800px;
+  line-height: 1.55;
+  font-size: clamp(0.92rem, 2.7vw, 1rem);
+  color: var(--dark-gray);
+}
+
+/* ===== GRID (always 2 columns) ===== */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* always 2 cols */
+  gap: clamp(0.75rem, 2.8vw, 2rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+/* Card */
+.trust-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 12px;
+  padding: clamp(1rem, 3.5vw, 2rem);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.trust-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Icon circle */
+.trust-icon {
+  width: clamp(42px, 8vw, 60px);
+  height: clamp(42px, 8vw, 60px);
+  background: var(--primary);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto clamp(0.6rem, 2.5vw, 1.25rem);
+}
+.trust-icon svg {
+  width: clamp(18px, 3.5vw, 24px);
+  height: clamp(18px, 3.5vw, 24px);
+  stroke: #fff;
+}
+
+/* Card text */
+.trust-card h3 {
+  color: var(--primary);
+  margin: 0 0 0.4rem;
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: clamp(0.95rem, 3.2vw, 1.2rem);
+}
+
+.trust-card p {
+  margin: 0;
+  color: var(--gray-600);
+  line-height: 1.6;
+  font-size: clamp(0.8rem, 2.8vw, 0.95rem);
+}
+
+/* CTA block */
+.trust-cta {
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+}
+
+.trust-cta-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.2s ease, transform 0.15s ease;
+  font-size: clamp(0.85rem, 2.6vw, 0.95rem);
+}
+.trust-cta-btn:hover { background: var(--primary-light); }
+.trust-cta-btn:active { transform: translateY(1px); }
+
+.trust-cta-btn:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+/* Note under CTA */
+.trust-cta-note {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  color: var(--gray-600);
+  font-size: clamp(0.8rem, 2.6vw, 0.9rem);
+}
+.trust-cta-note svg {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+/* Micro-tuning for very narrow phones while keeping 2 cols */
+@media (max-width: 380px) {
+  .trust-grid { gap: 0.6rem; }
+  .trust-card { padding: 0.9rem; }
+  .trust-icon { width: 38px; height: 38px; }
+  .trust-icon svg { width: 16px; height: 16px; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .trust-card,
+  .trust-cta-btn {
+    transition: none;
+  }
+}

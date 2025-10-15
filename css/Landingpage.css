@@ -1,0 +1,313 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+/* Sticky Top Bar */
+.call-top-bar {
+  position: sticky;
+  top: 0;
+  background: #d62828;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.call-top-bar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Header styles */
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffffff;
+  padding: 0.25rem 1rem;        /* Reduced vertical padding */
+  font-family: 'Poppins', sans-serif;
+
+  min-height: 64px;            /* Slimmer header height */
+  box-shadow: none;            /* Remove unwanted line/shadow */
+  border-bottom: 1px solid #eee; /* Optional: light border for clarity */
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+    min-height: 80px;
+  }
+}
+
+
+.logo img {
+  max-height: 70px;
+  width: auto;
+  margin-bottom: -20px;
+}
+
+/* Navigation styles */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
+
+.nav-menu .fa-chevron-down {
+  font-size: 0.8em;
+}
+
+/* Header right section styles */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Social Links */
+.social-link {
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-link span {
+  display: none;
+}
+
+.social-link:hover {
+  color: #007bff;
+}
+
+.support-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.support-text {
+  font-size: 0.6rem;
+  color: #6B7280;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin-bottom: -15px;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.phone-number i {
+  color: #007bff;
+  font-size: 1.8rem;
+  line-height: 1;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-right: -5px;
+}
+
+.phone-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F2937;
+  letter-spacing: -0.3px;
+}
+
+.sign-in-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sign-in-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.hero-image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Overlay for image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* Text Overlay */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 2rem 1.5rem;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+/* Benefit List */
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Call Now Button */
+.call-button {
+  background: #d62828;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.call-button:hover {
+  background: #b71c1c;
+}
+
+/* Info Section */
+.info {
+  padding: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  color: #333;
+}
+
+/* Full CTA Section */
+.full-cta {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.call-button.full {
+  background: #023e8a;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.call-button.full:hover {
+  background: #001f54;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+    padding: 4rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .benefits {
+    align-items: flex-start;
+    font-size: 1.2rem;
+  }
+
+  .call-button.full {
+    font-size: 1.3rem;
+  }
+
+  .hero-image img {
+    width: 60%;
+    height:10%;
+    object-position: right;
+  }
+}

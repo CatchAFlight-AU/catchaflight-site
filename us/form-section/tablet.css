@@ -1,0 +1,25 @@
+/* Tablet-specific adjustments */
+@media (min-width: 600px) and (max-width: 991px) {
+  .hero-section {
+    padding: 2.5rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.15rem;
+  }
+
+  .agent-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .flight-search-box {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    padding: 2rem;
+  }
+}

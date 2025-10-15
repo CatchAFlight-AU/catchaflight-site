@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JetBlue Flight Deals</title>
+  
+  <!-- Preload agent image -->
+  <link rel="preload" as="image" href="/images/Marshall.webp" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="mobile.css" media="(max-width: 599px)">
+  <link rel="stylesheet" href="tablet.css" media="(min-width: 600px) and (max-width: 991px)">
+  <link rel="stylesheet" href="desktop.css" media="(min-width: 992px)">
+</head>
+<body>
+  <section class="hero-section">
+    <div class="container">
+      <!-- Headline Content -->
+      <div class="hero-content">
+        <h1>
+          Book JetBlue Flights With<br>
+          <span>Live Travel Experts</span> –<br>
+          Save Up to 30% Today
+        </h1>
+
+        <p class="hero-subheadline">
+          Speak to a real expert for instant seat confirmation, fare match, and faster JetBlue booking support.
+        </p>
+
+        <!-- Small Circular Image -->
+        <div class="agent-image">
+          <img src="/images/Marshall.webp" alt="Support Agent" width="120" height="120" loading="eager">
+        </div>
+
+        <!-- Call Button -->
+        <a href="tel:+13052045332" class="hero-cta-btn pulse">
+          <i class="fas fa-phone"></i>
+          <span>CALL NOW – Speak to an Agent</span>
+        </a>
+      </div>
+
+      <!-- Flight Search Form (shown on all devices) -->
+      <div class="flight-search-box">
+        <h2>Phone-Only <strong>Flight Deals</strong></h2>
+        <p>Save up to 50%* OFF flights all over the world.<br>Take advantage of the price savings and book now!</p>
+
+        <form id="flight-form" action="https://formspree.io/f/xvgrvgye" method="POST">
+            <!-- STEP 1 -->
+            <div id="step-1">
+              <select id="trip-type" name="trip_type" required>
+                <option value="round">Round-trip</option>
+                <option value="oneway">One-way</option>
+              </select>
+
+              <div class="autocomplete-wrapper">
+                <input type="text" placeholder="From Airport" data-airport="from" required />
+              </div>
+
+              <div class="autocomplete-wrapper">
+                <input type="text" placeholder="To Airport" data-airport="to" required />
+              </div>
+
+              <div class="row-group">
+                <label>Adults:
+                  <select id="adults" name="adults" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </label>
+
+                <label>Children:
+                  <select id="children" name="children" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </label>
+
+                <label>Infants:
+                  <select id="infants" name="infants" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </label>
+
+                <label>Cabin Class:
+                  <select id="cabin-class" name="cabin_class" required>
+                    <option value="economy">Economy</option>
+                    <option value="premium">Premium Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first">First Class</option>
+                  </select>
+                </label>
+              </div>
+
+              <button type="button" id="next-step-1">Next</button>
+            </div>
+
+            <!-- STEP 2 -->
+            <div id="step-2" style="display: none;">
+              <input type="date" id="depart-date" name="depart_date" required />
+              <input type="date" id="return-date" name="return_date" />
+              <button type="button" id="next-step-2">Next</button>
+            </div>
+
+            <!-- STEP 3 -->
+            <div id="step-3" style="display: none;">
+              <input type="text" id="contact-name" name="full_name" placeholder="Full Name" required />
+              <input type="text" id="contact-phone" name="phone_number" placeholder="Phone Number" required />
+              <input type="email" id="contact-email" name="email_address" placeholder="Email Address" required />
+              <button type="submit">Search Flights</button>
+            </div>
+
+            <!-- Hidden IATA fields -->
+            <input type="hidden" name="from_iata" id="from-iata" />
+            <input type="hidden" name="to_iata" id="to-iata" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js/airport-autocomplete.js"></script>
+  <script src="form-section.js"></script>
+</body>
+</html>

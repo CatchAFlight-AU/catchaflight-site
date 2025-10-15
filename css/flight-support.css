@@ -1,0 +1,222 @@
+.flight-box .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #3b4a7a, #2c3e50);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: white;
+}
+
+.flight-box .header-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.flight-box .header-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.flight-box .header-section p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.flight-box .search-form {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.flight-box .form-control {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+}
+
+.flight-box .travelers-dropdown {
+    position: relative;
+}
+
+.flight-box .dropdown-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-box .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    z-index: 1000;
+    color: #333;
+    width: 100%;
+}
+
+.flight-box .travelers-dropdown:focus-within .dropdown-content,
+.flight-box #travelersBtn:focus + .dropdown-content {
+    display: block;
+}
+
+.flight-box .passenger-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.flight-box .counter-btn {
+    background: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.flight-box .destination-inputs,
+.flight-box .date-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.flight-box .input-group {
+    position: relative;
+    flex: 1;
+}
+
+.flight-box .input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+}
+
+.flight-box .input-group input {
+    padding-left: 36px;
+}
+
+.flight-box .swap-btn {
+    background: #f39c12;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    align-self: center;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.flight-box .date-group {
+    position: relative;
+    flex: 1;
+}
+
+.flight-box .date-group label {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    background: white;
+    font-size: 12px;
+    color: #666;
+    padding: 0 4px;
+}
+
+.flight-box .search-btn {
+    padding: 14px;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.flight-box .search-btn:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.flight-box .footer-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.flight-box .footer-text a {
+    color: #f1c40f;
+    text-decoration: underline;
+}
+
+.flight-box .results-section {
+    margin-top: 30px;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flight-box .results-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.flight-box .back-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #3498db;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.flight-box .flight-results {
+    min-height: 100px;
+}
+
+.flight-box .loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    margin-top: 20px;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .flight-box .destination-inputs,
+    .flight-box .date-inputs {
+        flex-direction: column;
+    }
+
+    .flight-box .container {
+        padding: 16px;
+    }
+
+    .flight-box .header-section h1 {
+        font-size: 1.8rem;
+    }
+}

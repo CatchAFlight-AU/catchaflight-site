@@ -1,0 +1,14 @@
+/* Popular Routes Tablet */
+@media (min-width: 600px) {
+    .popular-routes {
+        padding: 2.5rem 0;
+    }
+    
+    .route-card {
+        width: 260px;
+    }
+    
+    .carousel-controls {
+        margin-top: 1.5rem;
+    }
+}

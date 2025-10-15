@@ -1,0 +1,23 @@
+/* Popular Routes Desktop */
+@media (min-width: 992px) {
+    .popular-routes {
+        padding: 3.5rem 0;
+    }
+    
+    .routes-carousel {
+        margin: 3rem 0;
+    }
+    
+    .route-card {
+        width: 280px;
+        margin-right: 2rem;
+    }
+    
+    .route-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .carousel-controls {
+        margin-top: 2rem;
+    }
+}

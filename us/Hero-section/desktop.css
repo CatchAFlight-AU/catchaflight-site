@@ -1,0 +1,100 @@
+/* Desktop styles (applied via media query) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.3rem;
+    max-width: 600px;
+  }
+
+  .hero-perks li {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .hero-image {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    margin: 0;
+    align-self: center;
+    max-width: 350px;
+  }
+
+  .hero-flight-count,
+  .hero-stars {
+    grid-column: 1 / span 2;
+  }
+
+/* Desktop CTA Button - in desktop.css */
+@media (min-width: 768px) {
+  /* Desktop CTA Button - Fixed Version */
+  .hero-cta-btn {
+    padding: 18px 32px;
+    font-size: 1.2rem;
+    min-width: 380px; /* Increased width to prevent wrapping */
+    max-width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(0, 48, 143, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .hero-cta-btn i {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  /* Ensure button stays on one line */
+  .hero-cta-btn span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+}
+  
+  /* Pulse animation - desktop version */
+  .pulse {
+    animation: pulse 1.5s infinite ease-out;
+  }
+  
+}  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 48, 143, 0.6);
+    }
+    70% {
+      box-shadow: 0 0 0 12px rgba(0, 48, 143, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 48, 143, 0);
+    }
+  }
+
+  /* Adjust the hero section padding for desktop */
+  .hero-section {
+    padding: 4rem 0;
+  }
+
+/* Large desktop adjustments */
+@media (min-width: 1024px) {
+  .hero-image {
+    max-width: 400px;
+  }
+  
+  .hero-cta-btn:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 48, 143, 0.3);
+  }
+}

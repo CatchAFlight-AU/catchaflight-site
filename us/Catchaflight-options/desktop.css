@@ -1,0 +1,98 @@
+/* ===== DESKTOP STYLES (min-width: 992px) ===== */
+@media (min-width: 992px) {
+    /* Grid Layout */
+    .value-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    /* Section Spacing */
+    .agency-services {
+        padding: 4rem 0;
+    }
+
+    /* Typography */
+    .agency-services h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .subhead {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Card Enhancements */
+    .value-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: var(--transition);
+    }
+
+    .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .fare-type {
+        padding: 2rem 1.5rem;
+    }
+
+    .fare-type i {
+        font-size: 2.2rem;
+    }
+
+    .fare-type h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Content Alignment */
+    .agency-benefits {
+        padding: 1.5rem 2rem;
+        flex-grow: 1;
+    }
+
+    .price-example {
+        text-align: center; /* Add this line */
+        margin: 0 auto 1rem; /* Changed from margin: 0 2rem 1rem */
+        width: calc(100% - 4rem); /* Adjust width to maintain padding */
+    }
+    
+    /* CTA Positioning */
+    .agency-cta {
+        margin-top: auto;
+        width: calc(100% - 4rem);
+        padding: 1rem;
+        font-size: 1.05rem;
+    }
+
+    /* Modal Adjustments */
+    .modal-content {
+        margin: 5% auto;
+        padding: 2.5rem;
+    }
+
+    .modal h3 {
+        font-size: 1.8rem;
+    }
+
+    /* FULL-WIDTH LEGAL DISCLAIMER */
+    .legal-disclaimer {
+        width: 50vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding: 2rem 0;
+    }
+
+    .legal-disclaimer .container {
+        max-width: 1200px;
+        padding: 0 3rem;
+    }
+}

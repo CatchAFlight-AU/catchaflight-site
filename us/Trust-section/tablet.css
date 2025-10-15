@@ -1,0 +1,15 @@
+@media (min-width: 600px) and (max-width: 1023px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+  }
+  
+  .trust-section h2 {
+    font-size: 2rem;
+  }
+  
+  .trust-cta-btn {
+    font-size: 1.1rem;
+    padding: 1.2rem 2.5rem;
+  }
+}

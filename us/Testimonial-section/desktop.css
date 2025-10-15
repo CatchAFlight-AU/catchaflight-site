@@ -1,0 +1,46 @@
+/* ===== DESKTOP STYLES ===== */
+@media (min-width: 992px) {
+    /* Testimonials */
+    .testimonials {
+        padding: 3.5rem 0;
+    }
+    
+    .testimonial-card {
+        width: 45%;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Final CTA */
+    .final-cta {
+        padding: 6rem 0;
+    }
+    
+    .final-cta h2 {
+        font-size: 2.7rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .cta-subhead {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .cta-button {
+        padding: 1.1rem 2.5rem;
+        font-size: 1.15rem;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    .cta-highlights {
+        margin-bottom: 3rem;
+    }
+}

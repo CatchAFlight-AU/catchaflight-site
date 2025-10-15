@@ -1,0 +1,73 @@
+/* Mobile-first styles (applied by default) */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subheadline {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+.hero-perks {
+  margin-bottom: 2.5rem;
+}
+
+.hero-perks li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.hero-cta-btn {
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  width: 100%;
+  min-width: 280px; /* Minimum width to prevent squeezing */
+  max-width: 100%;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 48, 143, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Consistent spacing between icon and text */
+}
+
+.hero-cta-btn i {
+  font-size: 1.2rem;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Pulse animation - mobile version */
+.pulse {
+  animation: pulse-mobile 1.5s infinite ease-out;
+}
+
+@keyframes pulse-mobile {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 48, 143, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 48, 143, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 48, 143, 0);
+  }
+}
+
+.hero-image {
+  margin: 2rem auto;
+  max-width: 300px;
+}
+
+.hero-flight-count {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.hero-stars {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+}

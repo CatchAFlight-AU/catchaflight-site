@@ -1,0 +1,1943 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Global site tag (gtag.js) - Google Ads: 17559348774 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17559348774"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Base Google Ads config
+  gtag('config', 'AW-17559348774');
+</script>
+
+<!-- Website Call Conversion (GFN) -->
+<script>
+  gtag('config', 'AW-17559348774/v6n8COjmxpsbEKbM-bRB', {
+    'phone_conversion_number': '1-305-204-5332'
+  });
+</script>
+
+<!-- End Google Tag Manager -->
+  <title>Catch A Flight Deal</title>
+  <link rel="preload" as="image" href="/images/Marshall.webp" imagesrcset="/images/Marsha-1.webp 1x" fetchpriority="high" />
+
+
+
+
+  <!-- CSS -->
+  <link rel="preload" as="style" href="Trust-section/trust-section.css" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="Trust-section/trust-section.css"></noscript>
+<link rel="preload" as="style" href="Catchaflight-options/csw.css" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="Catchaflight-options/csw.css"></noscript>
+<link rel="stylesheet" href="Popular-Deals/popular-deals.css" media="print" onload="this.media='all'">
+<link rel="preload" as="style" href="Testimonial-section/base.css" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="Testimonial-section/base.css"></noscript>
+<link rel="preload" as="style" href="Testimonial-section/mobile.css" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="Testimonial-section/mobile.css"></noscript>
+  <link rel="preload" as="style" href="Testimonial-section/tablet.css" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="Testimonial-section/tablet.css"></noscript>
+<link rel="preload" as="style" href="Testimonial-section/desktop.css" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="Testimonial-section/desktop.css"></noscript>
+
+<!--script pre-load ---->
+
+<link rel="preload" href="/js/airport-autocomplete.js" as="script">
+<link rel="preload" href="form-section/form-section.js" defer as="script">
+
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
+  
+  
+ <style>
+
+
+:root {
+  --primary: #00308F;
+  --primary-light: #2A52BE;
+  --secondary: #FFC72C;
+  --white: #FFFFFF;
+  --light-gray: #F8F9FA;
+  --dark-gray: #212529;
+  --success: #28A745;
+  --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background-color: var(--white);
+}
+
+  
+.sticky-phone-bottom-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00308F;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 16px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.call-now-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00308F;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  z-index: 9999; /* Higher than header */
+  min-height:50px;
+}
+
+
+.call-now-banner a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.call-now-banner a:hover {
+  text-decoration: none;
+}
+
+.header {
+    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 16px;
+  margin-top: 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+}
+
+.menu-icon span {
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+
+.popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #e6f1f7;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+
+.popup-box {
+      background: #fff;
+      padding: 20px 15px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+.popup-logo {
+  height: 60px;
+}
+
+.popup-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+.popup-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #fff;
+  background: #0a3c5e;
+  width: 100%;
+}
+
+.popup-plane {
+  width: 80%;
+  margin: 15px 0;
+}
+
+.popup-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  flex: 1 1 45%;
+  padding: 10px;
+  border: none;
+  background: #0a3c5e;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup-agent-wrapper {
+      display: inline-block;
+      background: #36454F;
+      padding: 10px;
+      border-radius: 50%;
+      margin: 10px 0;
+    }
+
+    .popup-agent {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+.popup-call-text {
+  font-size: 14px;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.popup-call-btn {
+  display: inline-block;
+  background: #ff5e00;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.popup-helpline {
+  font-size: 14px;
+  color: #222;
+}
+
+.popup-header-controls {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      gap: 10px;
+    }
+
+
+.popup-call-inline {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      background: #e5f7ec;
+      border: 2px solid #28a745;
+      border-radius: 20px;
+      padding: 4px 10px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .popup-call-inline svg {
+      width: 16px;
+      height: 16px;
+      fill: #28a745;
+    }
+
+/* Footer */
+footer {
+    background: grey;
+    color: white;
+    padding: 4rem 0;
+  }
+  
+  .footer-grid {
+    display: grid;
+    gap: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .footer-col h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-col h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-col p {
+    color: var(--color-gray-400);
+    margin-bottom: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    color: var(--color-gray-400);
+    transition: color 0.2s;
+  }
+  
+  .social-links a:hover {
+    color: white;
+  }
+  
+  .social-links i {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-col ul a {
+    color: var(--color-gray-400);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .footer-col ul a:hover {
+    color: white;
+  }
+  
+  .contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-gray-400);
+  }
+  
+  .contact-info i {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-gray-800);
+    text-align: center;
+    color: var(--color-gray-400);
+  }
+  
+.hero {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.banner-strip {
+  background-color: #4395CA; /* Blue color */
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.banner-strip p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero-image-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  text-align: center;
+  margin-top: clamp(10px, 2.5vw, 16px);
+}
+
+.hero-content h1 {
+  font-size: clamp(1.45rem, 4.2vw, 2rem);
+  color: #00308F;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-subheadline {
+  font-size: clamp(1rem, 3.2vw, 1.2rem);
+  color: var(--dark-gray);
+  margin: 0 0 1rem;
+}
+
+
+.call-buttons {
+  text-align: center;
+  margin: 24px 16px;
+}
+
+.call-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 18px;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 12px 0;
+  transition: background-color 0.3s ease;
+}
+
+.call-btn.primary {
+  background-color: #00308F; /* blue */
+  color: #fff;
+}
+
+.call-btn.secondary {
+  background-color: #ff6600;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  border-radius: 40px;
+  text-align: left;
+  font-weight: bold;
+  width: 85%;
+  max-width: 100%;
+  margin: 16px auto;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.call-btn.secondary svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+.call-btn .btn-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.call-label {
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.btn-text strong {
+  font-size: 20px;
+}
+
+
+/* Flight search container with center alignment and responsive padding */
+.flight-search-box {
+  background: #fff;
+  color: #000;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 3rem auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Headline styling */
+.flight-search-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.flight-search-box p {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Inputs and selects */
+form select,
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="date"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+/* Button */
+form button {
+  background: linear-gradient(to right, #ffb900, #f48c06);
+  color: black;
+  font-weight: bold;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Flex layout for passenger and cabin selection */
+.row-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.row-group label {
+  flex: 1;
+  min-width: 100px;
+}
+
+/* Passenger select dropdowns */
+.passenger-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.passenger-select label,
+label select {
+  flex: 1 1 45%;
+  min-width: 100px;
+}
+.autocomplete-dropdown {
+  position: absolute;
+  z-index: 999;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  border-radius: 0 0 6px 6px;
+}
+
+.autocomplete-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.4;
+  transition: background 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.active {
+  background-color: #f0f8ff;
+  color: #000;
+}
+
+.autocomplete-item span {
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* Mobile-specific tweaks */
+@media (max-width: 768px) {
+  .flight-search-box {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .passenger-select {
+    flex-direction: column;
+  }
+}
+
+.phone-booking-section {
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
+  padding: 4rem 1rem;
+}
+
+.phone-booking-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.5rem;
+}
+
+.phone-booking-section .title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--primary);
+  gap: 0.75rem;
+}
+
+.phone-booking-section .title svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: var(--primary);
+}
+
+.phone-booking-section .intro {
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 800px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: var(--white);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.feature-card svg {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: var(--secondary);
+}
+
+.feature-card span {
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.step {
+  position: relative;
+  background: var(--white);
+  border-radius: 0.75rem;
+  padding: 2.25rem 1rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.step::before {
+  content: attr(data-step);
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--white);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.step p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.cta-wrap {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.75rem 1.75rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+  background: var(--primary-light);
+  transform: translateY(-3px);
+}
+
+.cta-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--white);
+}
+.phone-booking-section {
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
+
+  padding: 4rem 1rem 8rem;
+  overflow: visible;
+  position: relative;
+}
+.phone-booking-section .cta-wrap {
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+  .faq-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+    font-size: 26px;
+  }
+  
+  .intro-text {
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+  
+  .faq-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #004080;
+  }
+  
+  .faq-item {
+    margin-bottom: 25px;
+  }
+  
+  .faq-item h3 {
+    font-size: 18px;
+    color: #0056b3;
+    margin-bottom: 10px;
+  }
+  
+  .faq-item p {
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .faq-item ul {
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  
+  .faq-item ul li {
+    margin-bottom: 6px;
+  }
+
+
+/* Hard block horizontal scroll everywhere */
+html { overflow-x: clip; }
+body { overflow-x: hidden; width: 100%; position: relative; }
+
+/* Keep halos inside */
+.hero::after, .why-call::after { inset: 0 !important; }
+
+/* Common overflow culprits */
+.container { max-width: 1100px; margin-inline: auto; padding-inline: 16px; overflow-x: clip; }
+img, svg { max-width: 100%; height: auto; }
+
+
+/* Fix typo that can break parsing */
+.hero::before, .why-call::before { border-radius: 0px; }
+</style>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTSNJBHQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Call Now Banner -->
+<div class="call-now-banner">
+  <p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="currentColor" style="margin-right: 8px;">
+    <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"/>
+</svg>
+    <a href="tel:+13052045332" data-gtm ="top-call-button">Call Now: +1-305-204-5332</a>
+  </p>
+</div>
+
+    
+      <!-- Header -->
+<header class="header">
+  <div class="logo">
+    <a href="/">
+      <img src="/images/Catchaflight-logo.webp" alt="Catch A Flight Logo" width="100" height="60">
+    </a>
+  </div>
+
+  <div class="menu-icon" id="menuToggle">
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+  
+
+
+<section class="hero">
+  <div class="banner-strip">
+    <p>Catch A Discounted Business Class Flight Deal!</p>
+  </div>
+  <div class="hero-image-container">
+    <img src="/images/Marshall.webp"
+     alt="Hero Image"
+     class="hero-image"
+     width="390"
+     height="300"
+     loading="eager"
+     decoding="async"
+     fetchpriority="high">
+
+  </div>
+  
+      <div class="hero-content">
+    <h1> Discounted Business Class Flights to Syndey – Call Now!</h1>
+    <p class="hero-subheadline">Get upto 70% off on Business Class Flights to Sydney.</p>
+    <p class="trust-line">Independent travel concierge – not affiliated with any airline.</p>
+  </div>
+  
+  
+    <div class="call-buttons">
+
+  <!-- Red button -->
+<a href="tel:+13052045332" data-gtm="secondary-call-btn" class="call-btn secondary">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" aria-hidden="true">
+    <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"/>
+  </svg>
+  <div class="btn-text">
+    <span class="call-label">Talk With A Travel Expert</span>
+    <strong>+1-305-204-5332</strong>
+  </div>
+</a>
+
+  
+ <!-- Text below blue button -->
+  <p class="call-text">
+    No waiting: Call Answered in less than 30 seconds<br>
+    <strong>24/7 HELPLINE</strong>
+  </p>
+  <div class="cta-separator">or</div>
+        <button class="call-btn primary open-modal" data-gtm="bottom-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18" fill="white" aria-hidden="true">
+            <path d="M502.3 190.8L327.4 338.4c-19.6 16.7-48.2 16.7-67.8 0L9.7 190.8C3.9 185.9 0 178.6 0 170.7V80c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v90.7c0 7.9-3.9 15.2-9.7 20.1zM480 160l-192 160L96 160V96l192 160L480 96v64z"/>
+          </svg>
+          Request Callback
+        </button>
+</div>
+
+
+</section>
+  <section class="flight-search-box">
+        <h2>Phone-Only <strong>Flight Deals</strong></h2>
+        <p>Save up to 50%* OFF flights all over the world.<br>Take advantage of the price savings and book now!</p>
+
+        <form id="flight-form" action="https://formspree.io/f/xvgrvgye" method="POST">
+
+          <!-- Step 1 -->
+          <div id="step-1">
+            <select id="trip-type" name="trip_type" required>
+              <option value="round">Round-trip</option>
+              <option value="oneway">One-way</option>
+            </select>
+
+            <div class="autocomplete-wrapper">
+                <input type="text" name="from_airport" placeholder="From Airport" data-airport="from" required />
+            </div>
+
+            <div class="autocomplete-wrapper">
+              <input type="text" name="to_airport" placeholder="To Airport" data-airport="to" required />
+
+            </div>
+
+            <div class="row-group">
+              <label>Adults:
+                <select id="adults" name="adults" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </label>
+
+              <label>Children:
+                <select id="children" name="children" required>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </label>
+
+              <label>Infants:
+                <select id="infants" name="infants" required>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </label>
+
+              <label>Cabin Class:
+                <select id="cabin-class" name="cabin_class" required>
+                  <option value="economy">Economy</option>
+                  <option value="premium">Premium Economy</option>
+                  <option value="business">Business</option>
+                  <option value="first">First Class</option>
+                </select>
+              </label>
+            </div>
+
+            <button type="button" id="next-step-1">Next</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div id="step-2" style="display: none;">
+              <label for="departure-date">Departure Date</label>
+            <input type="date" id="depart-date" name="depart_date" required />
+            <label for="return-date">Return Date</label>
+            <input type="date" id="return-date" name="return_date" />
+            <button type="button" id="next-step-2">Next</button>
+          </div>
+
+          <!-- Step 3 -->
+          <div id="step-3" style="display: none;">
+            <input type="text" id="contact-name" name="full_name" placeholder="Full Name" required />
+            <input type="text" id="contact-phone" name="phone_number" placeholder="Phone Number" required />
+            <input type="email" id="contact-email" name="email_address" placeholder="Email Address" required />
+            <button type="submit">Search Flights</button>
+          </div>
+
+          <!-- Hidden fields for IATA -->
+          <input type="hidden" name="from_iata" id="from-iata" />
+          <input type="hidden" name="to_iata" id="to-iata" />
+        </form>
+      </section>
+  
+  
+  
+  <!--popup-->
+  
+  <div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <div class="popup-header">
+  <img src="/images/Catchaflight-logo.webp" width="105px" height="105px" alt="Catchaflight Logo" class="popup-logo">
+  <div class="popup-header-controls">
+        <a href="tel:+13052045332" class="popup-call-inline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"/></svg>
+          +1-305-204-5332
+        </a>
+        <button class="popup-close" onclick="closePopup()">&times;</button>
+      </div>
+    </div>
+    <div class="popup-subtitle">Book Discounted Deals - Call Now!</div>
+    
+     <img src="/images/airlines.png" alt="Plane" class="popup-plane">
+    <div class="popup-buttons">
+        <a href= "tel:+13052045332" class="cta-button">New Booking</a>
+        <a href= "tel:+13052045332" class="cta-button">Cancellations</a>
+        <a href= "tel:+13052045332" class="cta-button">Changes</a>
+        <a href= "tel:+13052045332" class="cta-button">Customer Service</a>
+
+    </div>
+    <div class="popup-agent-wrapper">
+    <img src="/images/Marsha-1.webp" alt="Agent" class="popup-agent" loading="eager" decoding="async" fetchpriority="high">
+    </div>
+    <div class="popup-call-text">No Hold – Call Answered in 5 Sec</div>
+
+    <a href="tel:+13052045332" class="popup-call-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="currentColor" style="margin-right: 8px;">
+    <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"/>
+</svg> +1-305-204-5332
+    </a>
+
+    <div class="popup-helpline">24/7 Helpline</div>
+  </div>
+</div>
+
+<section class="trust-section">
+  <div class="container">
+    <h2>Why Thousands of Travelers Trust Our Flight Experts?</h2>
+    <p class="trust-subheadline">We're not just another booking site - we're your personal flight specialists</p>
+
+    <div class="trust-grid">
+      <!-- Card 1 -->
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Airline-Certified Experts</h3>
+        <p>Our agents complete official certifications program annually to provide you with the most accurate information.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3>Real-Time Availability</h3>
+        <p>We access live seat availability and pricing directly from airline's system – no outdated listings or false promises.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <h3>Price Match Guarantee</h3>
+        <p>Found a better deal? We'll match it and still provide our expert service at no additional cost.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="trust-card">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            <path d="M14.05 2a9 9 0 0 1 8 7.94"/>
+            <path d="M14.05 6A5 5 0 0 1 18 10"/>
+          </svg>
+        </div>
+        <h3>Dedicated Support</h3>
+        <p>Get direct access to your booking specialist even after purchase for any changes or questions.</p>
+      </div>
+    </div>
+
+    <div class="trust-cta">
+      <a href="tel:+13052045332" class="trust-cta-btn" data-gtm="middle-call-button">
+        SPEAK TO A FLIGHT SPECIALIST NOW
+      </a>
+      <p class="trust-cta-note">
+        ✅ Your information is secure with us and will never be shared.    </p>
+    </div>
+  </div>
+</section>
+
+<section class="phone-booking-section">
+  <div class="container">
+
+    <h3 class="subtitle">How to Book Cheap Flights by Phone</h3>
+    <div class="steps-grid">
+      <div class="step" data-step="1">
+        <p>Call our toll-free number</p>
+      </div>
+      <div class="step" data-step="2">
+        <p>Share your travel plan (cities, dates, preferences)</p>
+      </div>
+      <div class="step" data-step="3">
+        <p>Let our experts find the best fares</p>
+      </div>
+      <div class="step" data-step="4">
+        <p>Choose the flight that suits you</p>
+      </div>
+      <div class="step" data-step="5">
+        <p>Book securely — confirmation sent instantly!</p>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="tel:+13052045332" class="cta-btn">
+        <svg class="icon icon-phone" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.99 17.99 0 0 1 2 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.24 1.02l-2.2 2.2z"/>
+        </svg>
+        Call Now & Save on Your Next Trip
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="popular-routes">
+  <div class="container">
+    <h2>Popular Routes & Deals</h2>
+    <p class="subhead">Best Flight Deals Just For You</p>
+
+    <div class="routes-carousel">
+      <!-- Card 1 - Dallas to Los Angeles -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">HOT</span>
+        </div>
+        <div class="route-details">
+          <h3>DAL → LAX</h3>
+          <p class="route-dates">Jul 12–18, 2025</p>
+          <p class="route-price">$119 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 2 - Baltimore to Chicago -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1494522855154-9297ac14b55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">LIMITED</span>
+        </div>
+        <div class="route-details">
+          <h3>BWI → MDW</h3>
+          <p class="route-dates">Aug 5–11, 2025</p>
+          <p class="route-price">$138 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 3 - Denver to Miami -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">NEW</span>
+        </div>
+        <div class="route-details">
+          <h3>DEN → MIA</h3>
+          <p class="route-dates">Sep 2–8, 2025</p>
+          <p class="route-price">$149 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 4 - Phoenix to Las Vegas (FIXED) -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">FLASH DEAL</span>
+        </div>
+        <div class="route-details">
+          <h3>PHX → LAS</h3>
+          <p class="route-dates">Jul 20–23, 2025</p>
+          <p class="route-price">$139 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 5 - Oakland to Seattle -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">POPULAR</span>
+        </div>
+        <div class="route-details">
+          <h3>OAK → SEA</h3>
+          <p class="route-dates">Aug 14–19, 2025</p>
+          <p class="route-price">$132 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 6 - Atlanta to New Orleans (FIXED) -->
+      <div class="route-card">
+      <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">HOT PICK</span>
+        </div>
+        <div class="route-details">
+          <h3>ATL → MSY</h3>
+          <p class="route-dates">Jul 29–Aug 3, 2025</p>
+          <p class="route-price">$125 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 7 - San Antonio to Houston -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">BEST VALUE</span>
+        </div>
+        <div class="route-details">
+          <h3>SAT → HOU</h3>
+          <p class="route-dates">Aug 17–21, 2025</p>
+          <p class="route-price">$142 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 8 - Baltimore to Boston (FIXED) -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">SAVE NOW</span>
+        </div>
+        <div class="route-details">
+          <h3>BWI → BOS</h3>
+          <p class="route-dates">Sep 4–10, 2025</p>
+          <p class="route-price">$189 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 9 - Los Angeles to San Francisco -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">WEEKEND FARE</span>
+        </div>
+        <div class="route-details">
+          <h3>LAX → SFO</h3>
+          <p class="route-dates">Jul 19–21, 2025</p>
+          <p class="route-price">$188 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Card 10 - Orlando to Nashville -->
+      <div class="route-card">
+        <div class="route-image" style="background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');">
+          <span class="deal-badge">STAFF PICK</span>
+        </div>
+        <div class="route-details">
+          <h3>MCO → BNA</h3>
+          <p class="route-dates">Aug 9–15, 2025</p>
+          <p class="route-price">$168 <span>roundtrip</span></p>
+          <a href="tel:+13052045332" class="route-cta" data-gtm="Popular-deals-cta">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <p class="subhead">Hear from travelers across the US</p>
+    
+    <div class="testimonials-carousel">
+      
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Sarah K.</h4>
+            <p class="location">New York, NY</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"CatchaFlight found me an amazing deal to Miami that saved me over $200 compared to other sites. Their customer service was exceptional when I needed to make a last-minute change."</p>
+          <div class="testimonial-date">June 15, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>David M.</h4>
+            <p class="location">Chicago, IL</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"Booked my flight to San Diego through CatchaFlight—smooth experience, great support, and unbeatable fare!"</p>
+          <div class="testimonial-date">June 12, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Linda T.</h4>
+            <p class="location">Austin, TX</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"I was able to upgrade to Business Select at a lower price than anywhere else. Highly recommend CatchaFlight for lowest fares!"</p>
+          <div class="testimonial-date">June 10, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Mark R.</h4>
+            <p class="location">Phoenix, AZ</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"Got a last-minute flight to Vegas. Their phone support was fast and friendly—got my booking done in minutes."</p>
+          <div class="testimonial-date">June 9, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Nina B.</h4>
+            <p class="location">San Francisco, CA</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"Best flight booking experience I’ve ever had. Their agent even helped me choose the right fare for my needs!"</p>
+          <div class="testimonial-date">June 7, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Ravi S.</h4>
+            <p class="location">Seattle, WA</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"Their team was patient and knowledgeable. I saved money and got better seats than I would have on my own."</p>
+          <div class="testimonial-date">June 6, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 7 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Amelia W.</h4>
+            <p class="location">Denver, CO</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"From booking to boarding, everything was smooth. CatchaFlight gave me peace of mind and great prices."</p>
+          <div class="testimonial-date">June 4, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 8 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Jason L.</h4>
+            <p class="location">Orlando, FL</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"I fly frequently and this was my first time using CatchaFlight. Won’t be my last—saved me $100+ on a roundtrip."</p>
+          <div class="testimonial-date">June 3, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 9 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Karen L.</h4>
+            <p class="location">Los Angeles, CA</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"Loved the call support! The agent helped me lock in a fare I was watching for days. Thank you CatchaFlight!"</p>
+          <div class="testimonial-date">June 2, 2025</div>
+        </div>
+      </div>
+
+      <!-- Testimonial 10 -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="customer-info">
+            <h4>Tyler B.</h4>
+            <p class="location">Atlanta, GA</p>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-content">
+          <p>"Was skeptical at first, but the service blew me away. No hidden fees and real agents answering your questions!"</p>
+          <div class="testimonial-date">June 1, 2025</div>
+        </div>
+      </div>
+      
+    </div>
+
+<!-- Slider Controls -->
+<div class="testimonial-controls">
+  <button class="testimonial-prev" aria-label="Previous testimonial">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="white" width="16" height="16" role="img" aria-hidden="true">
+      <title>Previous</title>
+      <path d="M34.52 239l194.3-194.3c12.5-12.5 32.75-12.5 45.25 0l22.25 22.25c12.5 12.5 12.5 32.75 0 45.25L146.5 256l149.8 149.8c12.5 12.5 12.5 32.75 0 45.25l-22.25 22.25c-12.5 12.5-32.75 12.5-45.25 0L34.52 273c-12.5-12.5-12.5-32.75 0-45.25z"/>
+    </svg>
+  </button>
+
+  <div class="testimonial-dots"></div>
+
+  <button class="testimonial-next" aria-label="Next testimonial">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="white" width="16" height="16" role="img" aria-hidden="true">
+      <title>Next</title>
+      <path d="M285.5 273l-194.3 194.3c-12.5 12.5-32.75 12.5-45.25 0L23.7 445.1c-12.5-12.5-12.5-32.75 0-45.25L173.5 256 23.7 106.2c-12.5-12.5-12.5-32.75 0-45.25L45.95 38.7c12.5-12.5 32.75-12.5 45.25 0L285.5 239c12.5 12.5 12.5 32.75 0 45.25z"/>
+    </svg>
+  </button>
+</div>
+  </div>
+</section>
+
+<!-- FAQs-->
+        <section class="faq-section">
+  <h1>Book Cheap Flight Tickets with Catch A Flight</h1>
+  <p class="intro-text">
+    Planning your next getaway? <strong>Catch A Flight</strong> helps travelers across the U.S. find and book cheap flights to top international destinations. Contact our travel specialists to unlock exclusive airfare deals and enjoy a smooth booking process.
+  </p>
+
+  <h2>Frequently Asked Questions about Booking Cheap Flights</h2>
+
+  <div class="faq-item">
+    <h3>Q. How can I find the cheapest flight tickets?</h3>
+    <p>Be flexible with your travel dates, book early, and consider mid-week departures. Our experts suggest flying on <strong>Tuesdays or Wednesdays</strong> for lower fares.</p>
+  </div>
+  
+  <div class="faq-item">
+  <h3>Q. Can I book my flight by phone?</h3>
+  <p>Yes. Our travel experts specialize in phone reservations, making it fast and easy to book flights.</p>
+</div>
+
+<div class="faq-item">
+  <h3>Q. How do I change or cancel a flight reservation?</h3>
+  <p>Call our agents anytime. We’ll assist you with flight changes, cancellations, or refunds.</p>
+</div>
+
+<div class="faq-item">
+  <h3>Q. Is it possible to upgrade my seat over the phone?</h3>
+  <p>Absolutely. We can help you upgrade to Business, Premium, or First Class during your booking call.</p>
+</div>
+
+
+  <div class="faq-item">
+    <h3>Q. When is the best time to book international flights?</h3>
+    <p>We recommend booking <strong>6 to 10 weeks</strong> in advance for international trips. Prices typically rise the closer you get to your travel date.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. What time of day is best to book cheap flights online?</h3>
+    <p>Flight prices can be lower during <strong>early mornings or late evenings</strong>, especially mid-week when demand is lower.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. Which airlines usually offer low-cost international tickets?</h3>
+    <p>Budget airlines like <strong>JetBlue, Spirit, Norse Atlantic, PLAY, and AirAsia</strong> often offer competitive international fares. We compare prices across <strong>500+ airlines</strong> to find you the best deal.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. How early should I arrive at the airport?</h3>
+    <p>For international departures, arrive at the airport <strong>3 hours before</strong> your scheduled flight. For domestic flights, aim for <strong>2 hours</strong> ahead of time.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. Can I cancel or change my flight after booking?</h3>
+    <p>Yes, but change and cancellation policies vary by airline and ticket type. Our travel advisors can guide you through the process and options available.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. Is it true that flight prices vary based on browser or device?</h3>
+    <p>Sometimes cookies can affect pricing shown. Use private browsing or call our team directly for the most accurate and up-to-date pricing.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. What if I need to book a last-minute flight?</h3>
+    <p>No problem. Our U.S.-based travel team can help you secure last-minute flight deals—just call us at <strong>+1-305-204-5332</strong>.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q. Do you offer discounts for seniors, students, or military personnel?</h3>
+    <p>Yes, we often have exclusive discounts for <strong>seniors, students, military members, and group travelers</strong>. Speak to our agents to check current offers.</p>
+  </div>
+
+  <div class="why-catchaflight">
+    <h2>Why book flights with Catch A Flight?</h2>
+    <p><strong>Catch A Flight</strong> is trusted by travelers across the United States to deliver affordable international flight deals. With access to over <strong>500+ airlines</strong> and personalized support, we help you book with confidence. Call now at <strong>+1-305-204-5332</strong> to get your best fare today!</p>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="final-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready for Your Perfect Flight Experience?</h2>
+      <p class="cta-subhead">Our travel experts are standing by to craft your ideal itinerary at the best possible price.</p>
+      
+      <div class="cta-highlights">
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18" fill="white" aria-hidden="true">
+            <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.248-22.627 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.627 0L100.687 260.686c-6.248 6.248-6.248 16.379 0 22.627l112 112c6.248 6.248 16.379 6.248 22.627 0z"/>
+          </svg>
+          <span>No-hassle booking</span>
+        </div>
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18" fill="white" aria-hidden="true">
+            <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.248-22.627 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.627 0L100.687 260.686c-6.248 6.248-6.248 16.379 0 22.627l112 112c6.248 6.248 16.379 6.248 22.627 0z"/>
+          </svg>
+          <span>24/7 customer support</span>
+        </div>
+        <div class="highlight-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18" fill="white" aria-hidden="true">
+            <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.248-22.627 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.627 0L100.687 260.686c-6.248 6.248-6.248 16.379 0 22.627l112 112c6.248 6.248 16.379 6.248 22.627 0z"/>
+          </svg>
+          <span>Best price guarantee</span>
+        </div>
+      </div>
+      
+      <div class="cta-actions">
+        <a href="tel:+13052045332" class="cta-button cta-primary" data-gtm="bottom-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="18" height="18" fill="white" aria-hidden="true">
+            <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"/>
+          </svg>
+          Call Now: (305) 204-5332
+        </a>
+        <div class="cta-separator">or</div>
+        <button class="cta-button cta-secondary open-modal" data-gtm="bottom-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18" fill="white" aria-hidden="true">
+            <path d="M502.3 190.8L327.4 338.4c-19.6 16.7-48.2 16.7-67.8 0L9.7 190.8C3.9 185.9 0 178.6 0 170.7V80c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v90.7c0 7.9-3.9 15.2-9.7 20.1zM480 160l-192 160L96 160V96l192 160L480 96v64z"/>
+          </svg>
+          Request Callback
+        </button>
+      </div>
+      
+      <div class="cta-guarantee">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18" fill="white" aria-hidden="true">
+          <path d="M466.5 83.7L263.1 3.1c-6.2-2.3-13.1-2.3-19.3 0L45.5 83.7C17.5 93.5 0 119.2 0 148.1c0 198.2 114.4 310.8 243.8 362.4 5.9 2.4 12.4 2.4 18.3 0 129.4-51.6 243.8-164.2 243.8-362.4 0-28.9-17.5-54.6-45.5-64.4zM392 208l-144 160c-4.5 5-10.7 8-17.3 8s-12.8-3-17.3-8l-80-88c-9.2-10.1-8.5-25.6 1.6-34.8s25.6-8.5 34.8 1.6l62.7 68.9L356.7 174c9.1-10.1 24.6-11 34.8-1.9s11 24.6 1.9 34.8z"/>
+        </svg>
+        <span>100% Satisfaction Guarantee - We don't get paid until you're happy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Callback Modal -->
+<div id="callbackModal" class="callback-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3>Request a Callback</h3>
+<form id="callback-form" action="https://formspree.io/f/xvgrvgye" method="POST">
+          <label for="user-name">Your Name</label>
+      <input type="text" id="user-name" name="name" required>
+
+      <label for="user-phone">Phone Number</label>
+      <input type="tel" id="user-phone" name="phone" required pattern="[0-9+\s()-]{7,}">
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</div>
+
+<!-- Sticky Phone Call Button -->
+<!-- Sticky Phone Call Button -->
+<a href="tel:+13052045332" class="sticky-phone-bottom-banner" id="bottomStickyBanner" data-gtm="sticky-phone-cta">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="currentColor" style="margin-right: 8px;">
+    <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z"/>
+  </svg>
+  Call Us +1-305-204-5332
+</a>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Catchaflight</h3>
+                <p>Find and compare the best flight deals from hundreds of airlines.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/catchaflightau" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/catchaflight.com.au" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#search-form">Search Flights</a></li>
+                    <li><a href="#popular-destinations">Popular Destinations</a></li>
+                    <li><a href="/pages/domestic-deals.html">Domestic Deals</a></li>
+                    <li><a href="/pages/international.html">International Deals</a></li>
+                    <li><a href="/pages/cathay-pacific-deals.html">Cathay Pacific Deals</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="/pages/about-us.html">About Us</a></li>
+                    <li><a href="/pages/contact.html">Contact Us</a></li>
+                    <li><a href="/pages/blog.html">Blog</a></li>
+                    <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="contact-info">
+                    <li>
+                        <a href="tel:+13052045332"><i class="fa-solid fa-phone" style="color: #ffffff;"></i> 0305-204-5332</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:support@catchaflight.com.au"> support@catchaflight.com.au</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        30 Auburn Parade, Cringila NSW 2502
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr> <!-- Separator Line -->
+
+        <!-- Disclaimer Section -->
+        <div class="footer-disclaimer">
+            <p>
+                <strong>Disclaimer:</strong> Catchaflight, an independent travel agency operating under the umbrella of 
+                <strong>DRYMS PTY LTD</strong>, is not affiliated with any specific airline. This independence ensures 
+                unbiased recommendations and transparent pricing. Without exclusive ties to specific carriers, 
+                Catchaflight is committed to providing customers with a diverse range of options, ensuring their 
+                travel needs and preferences are met. 
+                <a href="/pages/disclaimer.html" class="read-more">Read more..</a>
+            </p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Catchaflight. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/catchaflightau"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/catchaflight.com.au"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+
+<!-- JS -->
+<!-- JS -->
+  <script src="/js/airport-autocomplete.js"></script>
+  <script src="/us/form-section/form-section.js"></script>
+<script src="Catchaflight-options/script.js" defer></script>
+<script src="Popular-Deals/carousel.js" defer></script>
+<script src="Testimonial-section/testimonials.js" defer></script>
+
+
+
+<script>
+  document.querySelectorAll(".agency-cta, .open-modal").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.getElementById("callbackModal").style.display = "block";
+    });
+  });
+
+  document.querySelector(".close-btn").addEventListener("click", () => {
+    document.getElementById("callbackModal").style.display = "none";
+  });
+
+  window.addEventListener("click", e => {
+    const modal = document.getElementById("callbackModal");
+    if (e.target === modal) modal.style.display = "none";
+  });
+</script>
+
+ 
+<script>
+function closePopup() {
+  const popup = document.getElementById('popup');
+  const main = document.getElementById('main-content');
+  if (popup) popup.style.display = 'none';
+  if (main) main.style.display = 'block';
+}
+
+window.onload = function () {
+  setTimeout(function () {
+    const popup = document.getElementById('popup');
+    const main = document.getElementById('main-content');
+    if (popup) popup.style.display = 'flex';
+    if (main) main.style.display = 'none';
+  }, 20000); // 20 seconds
+};
+</script>
+
+
+
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/674d12ab4304e3196aeb3347/1ie2h1re1';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "CatchaFlight",
+  "url": "https://www.catchaflight.com.au",
+  "telephone": "+13052045332",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30 Auburn Parade",
+    "addressLocality": "Cringila",
+    "addressRegion": "NSW",
+    "postalCode": "2502",
+    "addressCountry": "AU"
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "sameAs": [
+    "https://www.facebook.com/catchaflightau",
+    "https://www.instagram.com/catchaflight.com.au"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en-US",
+  "name": "Book Cheap Flight Tickets with Catch A Flight — FAQs",
+  "url": "https://www.catchaflight.com.au/us/reservations-by-phone.html",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How can I find the cheapest flight tickets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Be flexible with your travel dates, book early, and consider mid-week departures. Our experts suggest flying on Tuesdays or Wednesdays for lower fares."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the best time to book international flights?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend booking 6 to 10 weeks in advance for international trips. Prices typically rise the closer you get to your travel date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What time of day is best to book cheap flights online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flight prices can be lower during early mornings or late evenings, especially mid-week when demand is lower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which airlines usually offer low-cost international tickets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Budget airlines like JetBlue, Spirit, Norse Atlantic, PLAY, and AirAsia often offer competitive international fares. We compare prices across 500+ airlines to find you the best deal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How early should I arrive at the airport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For international departures, arrive at the airport 3 hours before your scheduled flight. For domestic flights, aim for 2 hours ahead of time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel or change my flight after booking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but change and cancellation policies vary by airline and ticket type. Our travel advisors can guide you through the process and options available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it true that flight prices vary based on browser or device?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes cookies can affect pricing shown. Use private browsing or call our team directly for the most accurate and up-to-date pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I need to book a last-minute flight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No problem. Our U.S.-based travel team can help you secure last-minute flight deals—just call us at +1-305-204-5332."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer discounts for seniors, students, or military personnel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we often have exclusive discounts for seniors, students, military members, and group travelers. Speak to our agents to check current offers."
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Catch A Flight",
+    "telephone": "+1-305-204-5332",
+    "areaServed": "US"
+  }
+}
+</script>
+
+
+
+</body>
+</html>
